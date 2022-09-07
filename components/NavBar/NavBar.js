@@ -4,7 +4,7 @@ import estilos from "./NavBar.module.css";
 const NavBar = () => {
   return (
     <>
-      <div className="">
+      <div className={estilos.back}>
         <div className=""></div>
 
         <ul>
