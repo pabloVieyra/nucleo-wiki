@@ -10,14 +10,14 @@ datasource db {
 }
 
 model categorias {
-  id      Int     @id
+  id      Int     @id @default(autoincrement())
   nombre  String  @db.VarChar(250)
   sistema Int
   estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 }
 
 model componentes {
-  id     Int     @id
+  id     Int     @id @default(autoincrement())
   tipo   Int
   valor  String  @db.LongText
   orden  Int
@@ -25,13 +25,13 @@ model componentes {
 }
 
 model favoritos {
-  id         Int @id
+  id         Int @id @default(autoincrement())
   post_id    Int
   usuario_id Int
 }
 
 model post {
-  id           Int     @id
+  id           Int     @id @default(autoincrement())
   nombre       String  @db.VarChar(250)
   categoria_id Int
   sistema      Int
@@ -41,13 +41,61 @@ model post {
 }
 
 model postComponentes {
-  id           Int     @id
+  id           Int     @id @default(autoincrement())
   post_id      Int?
   categoria_id Int?
   estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 }
 
 model usuarios {
+  id       Int     @id @default(autoincrement())
+  nombre   String  @db.VarChar(250)
+  apellido String  @db.VarChar(250)
+  email    String  @db.VarChar(250)
+  clave    String  @db.VarChar(16)
+  rol      Int
+  estado   Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+}
+
+model a6e473_52d2_5738_a8d9_dce9d975044d_20220907055316_vrepl {
+  id         Int @id
+  post_id    Int
+  usuario_id Int
+
+  @@map("_10a6e473_52d2_5738_a8d9_dce9d975044d_20220907055316_vrepl")
+}
+
+model d110d7c_cd7c_5c0b_a2a1_4f114dcb846a_20220907055307_vrepl {
+  id      Int     @id
+  nombre  String  @db.VarChar(250)
+  sistema Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_4d110d7c_cd7c_5c0b_a2a1_4f114dcb846a_20220907055307_vrepl")
+}
+
+model de9dc04_b01b_52b6_84c5_017515440512_20220907055319_vrepl {
+  id           Int     @id
+  nombre       String  @db.VarChar(250)
+  categoria_id Int
+  sistema      Int
+  visitas      Int
+  valoraciones Int
+  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_4de9dc04_b01b_52b6_84c5_017515440512_20220907055319_vrepl")
+}
+
+model bf69_7f11_575d_887d_568a8d546a4d_20220907055324_vrepl {
+  id           Int     @id
+  post_id      Int?
+  categoria_id Int?
+  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_7214bf69_7f11_575d_887d_568a8d546a4d_20220907055324_vrepl")
+}
+
+model dfb6bca_de3f_57a0_93bd_7ae8525a66d5_20220907055328_vrepl {
   id       Int     @id
   nombre   String  @db.VarChar(250)
   apellido String  @db.VarChar(250)
@@ -55,4 +103,16 @@ model usuarios {
   clave    String  @db.VarChar(16)
   rol      Int
   estado   Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_8dfb6bca_de3f_57a0_93bd_7ae8525a66d5_20220907055328_vrepl")
+}
+
+model bbb50f68_d99f_5c66_9947_b90672a900c7_20220907055312_vrepl {
+  id     Int     @id
+  tipo   Int
+  valor  String  @db.LongText
+  orden  Int
+  estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_bbb50f68_d99f_5c66_9947_b90672a900c7_20220907055312_vrepl")
 }
