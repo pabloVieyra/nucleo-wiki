@@ -3,127 +3,132 @@ import estilos from "./NavBar.module.css";
 
 const NavBar = () => {
   return (
-    <>
-      <div className={estilos.back}>
-        <div className=""></div>
+    <div className={estilos.body}>
+      <div className={estilos.nav}> 
+        <div className={estilos.logo}></div>
 
         <ul>
-          <li className="">
+          <li className={`${estilos.NavBar} ${estilos.system} ${estilos.eje}`}>
             <a href="#"> Sistemas </a>
 
-            <ul className="">
-              <li className="">
-                <a href="#">Gastronómico</a>
+            <ul className={estilos.menuHorSystem}>
 
-                <ul className="menu--ver--ng">
-                  <li className="">
+              <li className={`${estilos.btn} ${estilos.ng} ${estilos.menu}`}>
+                <a href="#">Gastronómico</a>
+                
+                <ul className={estilos.menuVerNg}>
+
+                  <li className={`${estilos.btn} ${estilos.menu2} `}>
                     <a href="#">Archivo</a>
                   </li>
 
-                  <li className="">
+                  <li className={`${estilos.btn} ${estilos.menu2} `}>
                     <a href="#">Ingredientes</a>
                   </li>
 
-                  <li className="">
+                  <li className={`${estilos.btn} ${estilos.menu2} `}>
                     <a href="#">Productos</a>
                   </li>
 
-                  <li className="btn menu2 ventas">
+                  <li className={`${estilos.btn} ${estilos.menu2} ${estilos.ventas}`}>
                     <a href="#">Ventas</a>
-                    <ul className="">
-                      <li className="">
+
+                    <ul className={(estilos.subMenuVentas , estilos.menuVerNg)}>
+
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Clientes</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Cuenta de Clientes</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Salón</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Delivery/Mostrador</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Monitor de Cocina</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Historial de pedidos</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Estadisticas</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Historial de Facturas</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Historial de Notas de Credito</a>
                       </li>
-                      <li className="">
+                      <li className={(estilos.btn , estilos.menu3)}>
                         <a href="#">Libro de IVA Ventas</a>
                       </li>
                     </ul>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Compras</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Recursos Humanos</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Fondos</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Gastos</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Estadisticas</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Auditorias</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Impresor Fiscal</a>
                   </li>
 
-                  <li className="">
+                  <li className={(estilos.btn , estilos.menu2)}>
                     <a href="#">Utilidades</a>
                   </li>
                 </ul>
               </li>
 
-              <li className="btn g1 menu">
+              <li className={(estilos.btn , estilos.g1 , estilos.menu)}>
                 <a href="#">G1</a>
               </li>
 
-              <li className="btn check menu">
+              <li className={(estilos.btn , estilos.check , estilos.menu)}>
                 <a href="#">Check</a>
               </li>
 
-              <li className="btn col menu">
+              <li className={(estilos.btn , estilos.col , estilos.menu)}>
                 <a href="#">Control Online</a>
               </li>
 
-              <li className="btn fce menu">
+              <li className={(estilos.btn , estilos.fce , estilos.menu)}>
                 <a href="#">Facturacion Electronica</a>
               </li>
             </ul>
           </li>
 
-          <li className="container btn contact">
+          <li className={(estilos.navBar , estilos.btn , estilos.contact , estilos.eje)}>
             <a>Contacto</a>
           </li>
 
-          <li className="perfil"></li>
+          <li className={(estilos.perfil , estilos.eje)}></li>
         </ul>
       </div>
-    </>
+
+    </div>
   );
 };
 
