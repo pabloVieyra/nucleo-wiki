@@ -10,10 +10,10 @@ datasource db {
 }
 
 model categorias {
-  id      Int     @id @default(autoincrement())
-  nombre  String  @db.VarChar(250)
+  id      Int    @id @default(autoincrement())
+  nombre  String @db.VarChar(250)
   sistema Int
-  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  estado  Int    @default(1)
 }
 
 model componentes {
@@ -115,4 +115,13 @@ model bbb50f68_d99f_5c66_9947_b90672a900c7_20220907055312_vrepl {
   estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 
   @@map("_bbb50f68_d99f_5c66_9947_b90672a900c7_20220907055312_vrepl")
+}
+
+model be241a1_c0d5_5930_85f7_0989beabc754_20220907065948_vrepl {
+  id      Int     @id @default(autoincrement())
+  nombre  String  @db.VarChar(250)
+  sistema Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_0be241a1_c0d5_5930_85f7_0989beabc754_20220907065948_vrepl")
 }
