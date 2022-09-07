@@ -1,13 +1,13 @@
 @import url('https://rsms.me/inter/inter.css');
 
-/* .tot {
+.todo {
     margin:0;
     padding:0;
-} */
+}
 
 .body {
     background-color: #121212;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 /*     margin:0;
     padding:0; */
 }
@@ -21,8 +21,6 @@
     display: flex;
     justify-content: space-between;
     background-color: #1F1F1F;
-    
-    
 }
 
 .nav.a{
@@ -35,8 +33,8 @@
     background-color: #1F1F1F;
 }
 
-.navBar{
-    padding: 15px;
+.NavBar{
+    padding: 15px !important;
     margin-right: 30px;
     font-family: inter;
     font-style: normal;
@@ -52,7 +50,7 @@
 .menuHorSystem{
     position: absolute;
     left: 0px;
-    top: 100%;
+    top: 98%;
     display: inline-block;
     background-color: #1F1F1F;   
     width: 100%;
@@ -81,7 +79,7 @@
     text-decoration: none;
 }
 
-.btn.a{
+.btn, .a{
     transition: color 0.2s;
     color: white;
 }
@@ -89,7 +87,7 @@
 
 
 /*------------ Hover verde -------------*/
-.nav, .btn:hover > a{
+.nav .btn:hover > a{
     color: #577534;
     font-weight: bold;
 }
@@ -122,7 +120,6 @@
 
 /*------------ Logos -------------*/
 .logo{
-    /* background-image: url(img/logo.png); */
     width: 342px;
     height: 60px;
     background-size: contain;
@@ -131,7 +128,6 @@
 }
 
 .perfil{
-    /* background-image: url(img/perfil.png); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -220,21 +216,5 @@
     letter-spacing: 1px;
     color: #577534;
 }
-
-/* .ng--img{
-    background-image: url(img/ng.png);
-}
-
-.check--img{
-    background-image: url(img/check.png);
-}
-
-.g1--img{
-    background-image: url(img/g1.png);
-}
-
-.col--img{
-    background-image: url(img/col.png);
-} */
 
 
