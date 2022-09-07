@@ -1,0 +1,58 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model categorias {
+  id      Int     @id
+  nombre  String  @db.VarChar(250)
+  sistema Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+}
+
+model componentes {
+  id     Int     @id
+  tipo   Int
+  valor  String  @db.LongText
+  orden  Int
+  estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+}
+
+model favoritos {
+  id         Int @id
+  post_id    Int
+  usuario_id Int
+}
+
+model post {
+  id           Int     @id
+  nombre       String  @db.VarChar(250)
+  categoria_id Int
+  sistema      Int
+  visitas      Int
+  valoraciones Int
+  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+}
+
+model postComponentes {
+  id           Int     @id
+  post_id      Int?
+  categoria_id Int?
+  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+}
+
+model usuarios {
+  id       Int     @id
+  nombre   String  @db.VarChar(250)
+  apellido String  @db.VarChar(250)
+  email    String  @db.VarChar(250)
+  clave    String  @db.VarChar(16)
+  rol      Int
+  estado   Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+}
