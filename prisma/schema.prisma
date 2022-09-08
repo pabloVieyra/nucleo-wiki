@@ -17,11 +17,12 @@ model categorias {
 }
 
 model componentes {
-  id     Int     @id @default(autoincrement())
-  tipo   Int
-  valor  String  @db.LongText
-  orden  Int
-  estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  id      Int     @id @default(autoincrement())
+  tipo    Int
+  valor   String  @db.LongText
+  orden   Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  post_id Int     @default(1)
 }
 
 model favoritos {
@@ -37,13 +38,6 @@ model post {
   sistema      Int
   visitas      Int
   valoraciones Int
-  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-}
-
-model postComponentes {
-  id           Int     @id @default(autoincrement())
-  post_id      Int?
-  categoria_id Int?
   estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 }
 
@@ -124,4 +118,54 @@ model be241a1_c0d5_5930_85f7_0989beabc754_20220907065948_vrepl {
   estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 
   @@map("_0be241a1_c0d5_5930_85f7_0989beabc754_20220907065948_vrepl")
+}
+
+model e2f3_1a65_5427_8de8_2c7eec3f7a42_20220908034731_vrepl {
+  id     Int     @id @default(autoincrement())
+  tipo   Int
+  valor  String  @db.LongText
+  orden  Int
+  estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_4976e2f3_1a65_5427_8de8_2c7eec3f7a42_20220908034731_vrepl")
+}
+
+model fde2c888_f926_5179_b26d_926838b7f6e3_20220908033748_vrepl {
+  id      Int     @id @default(autoincrement())
+  tipo    Int
+  valor   String  @db.LongText
+  orden   Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  post_id Int
+
+  @@map("_fde2c888_f926_5179_b26d_926838b7f6e3_20220908033748_vrepl")
+}
+
+model fde2c888_f926_5179_b26d_926838b7f6e3_20220908033757_vrepl {
+  id      Int     @id @default(autoincrement())
+  tipo    Int
+  valor   String  @db.LongText
+  orden   Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  post_id Int
+
+  @@map("_fde2c888_f926_5179_b26d_926838b7f6e3_20220908033757_vrepl")
+}
+
+model vt_HOLD_93250bd3992b581e95087bd07fc62919_20220908070555 {
+  id      Int    @id @default(autoincrement())
+  nombre  String @db.VarChar(250)
+  sistema Int
+  estado  Int    @default(1)
+
+  @@map("_vt_HOLD_93250bd3992b581e95087bd07fc62919_20220908070555")
+}
+
+model vt_HOLD_adaef0b546f1525cb0667e178bd52f74_20220909034741 {
+  id           Int     @id @default(autoincrement())
+  post_id      Int?
+  categoria_id Int?
+  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+
+  @@map("_vt_HOLD_adaef0b546f1525cb0667e178bd52f74_20220909034741")
 }
