@@ -1,75 +1,92 @@
 import React from "react";
 import style from "./HomePage.module.css";
+import logoNg from '../../public/Images/ng.png'
+import logoG1 from '../../public/Images/g1.png'
+import logoCheck from '../../public/Images/check.png'
+import logoCol from '../../public/Images/col.png'
+import Image from 'next/image';
 
 const HomePage = () => {
   return (
     <>
-        <div className={style.section}>
+        <div className={style.contain}>
+            <div className={style.section}>
 
-        <div className={style.iconContainer}>
+                <div className={style.iconContainer}>
 
-            <div className={style.icoContainerInner}>
+                    <div className={style.iconContainerInner}>
 
-                <div className={(style.iconFront,style.ngImg)}></div>
+                        <div className={style.iconFront}>
+                            <div className={style.imgIcon}>
+                                <Image  src={logoNg} alt='gastronomico'></Image>
+                            </div>
+                        </div>
 
-                    <div className={style.iconBack}>
+                        <div className={style.iconBack}>
+                            <h1 className={style.iconText}>Sistema  Gastronómico</h1>
+                        </div>
 
-                    <h1 className={style.iconText}>Sistema  Gastronómico</h1>
+                    </div>
 
                 </div>
 
-             </div>
+                <div className={style.iconContainer}>
 
-         </div>
+                    <div className={style.iconContainerInner}>
 
-        <div className={style.iconContainer}>
+                        <div className={style.iconFront}>
+                            <div className={style.imgIcon}>
+                                <Image  src={logoCheck} alt='check'></Image>
+                            </div>
+                        </div>
 
-            <div className={style.iconContainerInner}>
-
-                <div className={(style.iconFront,style.checkImg)}></div>
-
-                    <div className={style.iconBack}>
-                        
-                    <h1 className={style.iconText}>Sistema Check</h1>
+                        <div className={style.iconBack}>
                             
-                </div>
-
-            </div>
-
-        </div>
-
-        <div className={style.iconContainer}>
-
-            <div className={style.iconContainerInner}>
-
-                <div className={(style.iconFront,style.g1Img)}></div>
-
-                    <div className={style.iconBack}>
+                            <h1 className={style.iconText}>Sistema Check</h1>
                                 
-                    <h1 className={style.iconText}>Sistema G1</h1>
-        
+                        </div>
+
+                    </div>
+
                 </div>
 
-            </div>
+                <div className={style.iconContainer}>
 
-        </div>
+                    <div className={style.iconContainerInner}>
 
-        <div className={style.iconContainer}>
+                        <div className={style.iconFront}>
+                            <div className={style.imgIcon}>
+                                <Image  src={logoG1} alt='G1'></Image>
+                            </div>
+                        </div>
 
-            <div className={style.iconContainerInner}>
+                        <div className={style.iconBack}>                
+                            <h1 className={style.iconText}>Sistema G1</h1>
+                        </div>
 
-                <div className={(style.iconFront,style.colImg)}></div>
+                    </div>
 
-                    <div className={style.iconBack}>
-                    
-                    <h1 className={style.iconText}>Control Online</h1>
-                
                 </div>
 
-            </div>
+                <div className={style.iconContainer}>
 
-        </div>
-        
+                    <div className={style.iconContainerInner}>
+
+                        <div className={style.iconFront}>
+                            <div className={style.imgIcon}>
+                                <Image  src={logoCol} alt='col'></Image>
+                            </div>
+                        </div>
+
+                        <div className={style.iconBack}>
+                            <h1 className={style.iconText}>Control Online</h1>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div>
         </div>
     </>
   );

@@ -1,7 +1,8 @@
 import React from "react";
 import estilos from "./NavBar.module.css";
-import logo from '../../public/Images/logo.png'
-import Image from 'next/image'
+import logo from '../../public/Images/logo.png';
+import perfil from '../../public/Images/perfil.png';
+import Image from 'next/image';
 
 const NavBar = () => {
   return (
@@ -128,7 +129,9 @@ const NavBar = () => {
             <a>Contacto</a>
           </li>
 
-          <li className={`${estilos.perfil} ${estilos.eje}` }></li>
+          <li className={`${estilos.perfil} ${estilos.eje}` }>
+           <Image src={perfil} alt='perfil'></Image>
+          </li>
         </ul>
       </div>
 
