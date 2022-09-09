@@ -4,8 +4,19 @@ import logo from '../../public/Images/logo.png';
 import perfil from '../../public/Images/perfil.png';
 import Image from 'next/image';
 
+
+
 const NavBar = () => {
+
+  const menuinfo = [
+    { id: 1, text: "Lorem 1" },
+    { id: 2, text: "Lorem 2" },
+    { id: 3, text: "Lorem 3" },
+    ];  
+
   return (
+
+
     <div className={estilos.todo}>
       <div className={estilos.nav}> 
         <div className={estilos.logo}>
@@ -40,41 +51,56 @@ const NavBar = () => {
 
                     <ul className={`${estilos.subMenuVentas} ${estilos.menuVerNg}` }>
 
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Clientes</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Cuenta de Clientes</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Salón</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Delivery/Mostrador</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Monitor de Cocina</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Historial de pedidos</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Estadisticas</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Historial de Facturas</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Historial de Notas de Credito</a>
-                      </li>
-                      <li className={`${estilos.btn} ${estilos.menu3}` }>
-                        <a href="#">Libro de IVA Ventas</a>
-                      </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Clientes</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Cuenta de Clientes</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Salón</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Delivery/Mostrador</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Monitor de Cocina</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Historial de pedidos</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Estadisticas</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Historial de Facturas</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Historial de Notas de Credito</a>
+                              </li>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#">Libro de IVA Ventas</a>
+                              </li>
                     </ul>
                   </li>
 
-                  <li className={`${estilos.btn} ${estilos.menu2}` }>
+                 
+
+                  <li className={`${estilos.btn} ${estilos.menu2} ${estilos.ventas}` }>
                     <a href="#">Compras</a>
+
+                      <ul className={`${estilos.subMenuVentas} ${estilos.menuVerNg}` }>
+                          {menuinfo.map(menu => {
+                            return (<>
+                              <li className={`${estilos.btn} ${estilos.menu3}` }>
+                                <a href="#" key={menu.id}>
+                                  {menu.text}
+                                </a>
+                            </li>
+                            </>)
+                          })}
+                          
+                      </ul> 
                   </li>
 
                   <li className={`${estilos.btn} ${estilos.menu2}` }>

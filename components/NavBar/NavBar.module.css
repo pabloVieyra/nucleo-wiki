@@ -32,8 +32,6 @@
 }
 
 .NavBar{
-    padding: 15px !important;
-    margin-right: 30px;
     font-family: inter;
     font-style: normal;
     font-size: 20px;
@@ -49,32 +47,34 @@
     position: absolute;
     left: 0px;
     top: 98%;
-    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     background-color: #1F1F1F;   
     width: 100%;
 }
 
 .menuVerNg{
     position: absolute;
-    top: 100%;
+    top: 98%;
     background-color: #1F1F1F;
 }
 
 .subMenuVentas{
-    width: 250px;
     left: 97%;
-    top: 105px;
+    top: 130px;
 }
 
 
 
 /*------------ Estilo boton -------------*/
 .btn{
-    padding: 5px;
+    padding: 7px;
     font-family: inter;
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
+    width: 240px;
 }
 
 .btn, .a{
@@ -95,15 +95,13 @@
 /*------------ Menu oculto-------------*/
 .menu, .menu2, .menu3{
     display: none;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 
 
 /*------------ Muestra menu hover -------------*/
 .system:hover > ul .menu{
-    display: inline-block;
+    display: flex;
 }
 
 .ng:hover > ul .menu2{
@@ -133,86 +131,6 @@
     height: 32px;
     margin-top: 10px;
     margin-right: 15px;
-}
-
-
-
-/*--------- Body - Iconos -----------*/
-
-.section{
-    height: 70vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 2%;
-    padding-bottom: 70px;
-    overflow: hidden;
-    margin-top: 40px;
-
-}
-
-/*--------- Iconos -----------*/
-.iconContainer{
-    height: 250px;
-    width: 250px;
-    
-    background-color: transparent;
-    perspective: 1000px;
-}
-
-.iconContainerInner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-    border-radius: 2000px;
-    
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    transform-style: preserve-3d;    
-}
-
-.iconContainer:hover .iconContainerInner{
-    transform: rotateY(180deg);
-}
-
-/*---------  Iconos 2 -----------*/
-.iconFront, .iconBack{
-    position: absolute;
-    border-radius: 2000px;
-    border: solid 2px #577534;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-box-reflect: below 30px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.8)));
-}
-
-.iconFront{
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 70% 70%;
-}
-
-.iconBack{
-    /*background-color: #1F1F1F;*/
-    color: white;
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-
-.iconText{
-    font-family: inter;
-    font-style: Bold;
-    font-size: 30px;
-    text-decoration: none;
-    letter-spacing: 1px;
-    color: #577534;
 }
 
 
