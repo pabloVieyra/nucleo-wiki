@@ -12,8 +12,8 @@
 
 
 /*------------ Barra de navegacion -------------*/
-.nav{
-    position: fixed;
+ .nav{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@
 
 .subMenuVentas{
     left: 97%;
-    top: 130px;
+    top: 0px;
 }
 
 
@@ -74,7 +74,7 @@
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
-    width: 240px;
+    width: 13vw;
 }
 
 .btn, .a{
@@ -101,15 +101,15 @@
 
 
 /*------------ Muestra menu hover -------------*/
-.system:hover .menu{
+.selected1:hover .menu{
     display: flex;
 }
 
-.ng:hover .menu2{
+.selected2:hover .menu2{
     display: block;
 }
 
-.ventas:hover .menu3{
+.selected3:hover .menu3{
     display: block;
 }
 
