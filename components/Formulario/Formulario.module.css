@@ -1,0 +1,36 @@
+.body {
+    background: black;
+}
+.contenedor {
+    display: grid;
+    padding: 10px;
+    margin: 10px;
+}
+.title {
+    font-size: 30px;
+    text-align: center;
+}
+.label {
+    display: block;
+    text-indent: 10px;
+}
+.form {
+    display: block;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #ced4da;
+}
+.textarea {
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #ced4da;
+}
+.button {
+    display: inline-block;
+    background: red;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 7px;
+    width: 10%;
+}
