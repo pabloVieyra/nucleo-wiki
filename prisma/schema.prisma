@@ -11,7 +11,7 @@ datasource db {
 
 model categorias {
   id      Int    @id @default(autoincrement())
-  nombre  String @db.VarChar(250)
+  nombre  String @unique(map: "nombre") @db.VarChar(250)
   sistema Int
   estado  Int    @default(1)
 }
@@ -51,121 +51,52 @@ model usuarios {
   estado   Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 }
 
-model a6e473_52d2_5738_a8d9_dce9d975044d_20220907055316_vrepl {
-  id         Int @id
-  post_id    Int
-  usuario_id Int
-
-  @@map("_10a6e473_52d2_5738_a8d9_dce9d975044d_20220907055316_vrepl")
-}
-
-model d110d7c_cd7c_5c0b_a2a1_4f114dcb846a_20220907055307_vrepl {
-  id      Int     @id
-  nombre  String  @db.VarChar(250)
-  sistema Int
-  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_4d110d7c_cd7c_5c0b_a2a1_4f114dcb846a_20220907055307_vrepl")
-}
-
-model de9dc04_b01b_52b6_84c5_017515440512_20220907055319_vrepl {
-  id           Int     @id
-  nombre       String  @db.VarChar(250)
-  categoria_id Int
-  sistema      Int
-  visitas      Int
-  valoraciones Int
-  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_4de9dc04_b01b_52b6_84c5_017515440512_20220907055319_vrepl")
-}
-
-model bf69_7f11_575d_887d_568a8d546a4d_20220907055324_vrepl {
-  id           Int     @id
-  post_id      Int?
-  categoria_id Int?
-  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_7214bf69_7f11_575d_887d_568a8d546a4d_20220907055324_vrepl")
-}
-
-model dfb6bca_de3f_57a0_93bd_7ae8525a66d5_20220907055328_vrepl {
-  id       Int     @id
-  nombre   String  @db.VarChar(250)
-  apellido String  @db.VarChar(250)
-  email    String  @db.VarChar(250)
-  clave    String  @db.VarChar(16)
-  rol      Int
-  estado   Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_8dfb6bca_de3f_57a0_93bd_7ae8525a66d5_20220907055328_vrepl")
-}
-
-model bbb50f68_d99f_5c66_9947_b90672a900c7_20220907055312_vrepl {
-  id     Int     @id
-  tipo   Int
-  valor  String  @db.LongText
-  orden  Int
-  estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_bbb50f68_d99f_5c66_9947_b90672a900c7_20220907055312_vrepl")
-}
-
-model be241a1_c0d5_5930_85f7_0989beabc754_20220907065948_vrepl {
-  id      Int     @id @default(autoincrement())
-  nombre  String  @db.VarChar(250)
-  sistema Int
-  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_0be241a1_c0d5_5930_85f7_0989beabc754_20220907065948_vrepl")
-}
-
-model e2f3_1a65_5427_8de8_2c7eec3f7a42_20220908034731_vrepl {
+model vt_PURGE_4976e2f31a6554278de82c7eec3f7a42_20220909034805 {
   id     Int     @id @default(autoincrement())
   tipo   Int
   valor  String  @db.LongText
   orden  Int
   estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 
-  @@map("_4976e2f3_1a65_5427_8de8_2c7eec3f7a42_20220908034731_vrepl")
+  @@map("_vt_PURGE_4976e2f31a6554278de82c7eec3f7a42_20220909034805")
 }
 
-model fde2c888_f926_5179_b26d_926838b7f6e3_20220908033748_vrepl {
-  id      Int     @id @default(autoincrement())
-  tipo    Int
-  valor   String  @db.LongText
-  orden   Int
-  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-  post_id Int
-
-  @@map("_fde2c888_f926_5179_b26d_926838b7f6e3_20220908033748_vrepl")
-}
-
-model fde2c888_f926_5179_b26d_926838b7f6e3_20220908033757_vrepl {
-  id      Int     @id @default(autoincrement())
-  tipo    Int
-  valor   String  @db.LongText
-  orden   Int
-  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-  post_id Int
-
-  @@map("_fde2c888_f926_5179_b26d_926838b7f6e3_20220908033757_vrepl")
-}
-
-model vt_HOLD_93250bd3992b581e95087bd07fc62919_20220908070555 {
-  id      Int    @id @default(autoincrement())
-  nombre  String @db.VarChar(250)
-  sistema Int
-  estado  Int    @default(1)
-
-  @@map("_vt_HOLD_93250bd3992b581e95087bd07fc62919_20220908070555")
-}
-
-model vt_HOLD_adaef0b546f1525cb0667e178bd52f74_20220909034741 {
+model vt_PURGE_adaef0b546f1525cb0667e178bd52f74_20220909034805 {
   id           Int     @id @default(autoincrement())
   post_id      Int?
   categoria_id Int?
   estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 
-  @@map("_vt_HOLD_adaef0b546f1525cb0667e178bd52f74_20220909034741")
+  @@map("_vt_PURGE_adaef0b546f1525cb0667e178bd52f74_20220909034805")
+}
+
+model vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033805 {
+  id      Int     @id @default(autoincrement())
+  tipo    Int
+  valor   String  @db.LongText
+  orden   Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  post_id Int
+
+  @@map("_vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033805")
+}
+
+model vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033806 {
+  id      Int     @id @default(autoincrement())
+  tipo    Int
+  valor   String  @db.LongText
+  orden   Int
+  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
+  post_id Int
+
+  @@map("_vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033806")
+}
+
+model fe726b8_eec0_5880_88d1_a12bca993cff_20220909035846_vrepl {
+  id      Int    @id @default(autoincrement())
+  nombre  String @db.VarChar(250)
+  sistema Int
+  estado  Int    @default(1)
+
+  @@map("_2fe726b8_eec0_5880_88d1_a12bca993cff_20220909035846_vrepl")
 }
