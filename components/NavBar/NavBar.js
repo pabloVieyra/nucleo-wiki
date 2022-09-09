@@ -25,10 +25,11 @@ const NavBar = () => {
     { id: 4, text: "Delivery/Mostrador" },
     { id: 5, text: "Monitor de Cocina" },
     { id: 6, text: "Historial de Pedidos" },
-    { id: 6, text: "Historial de Facturas" },
-    { id: 5, text: "Monitor de NC" },
-    { id: 6, text: "Libro de IVA Ventas" },
+    { id: 7, text: "Historial de Facturas" },
+    { id: 8, text: "Monitor de NC" },
+    { id: 9, text: "Libro de IVA Ventas" },
     ];  
+
 /*function clickMenu() {
     document.getElementsByClassName("menu")[0].style.display = "flex";
   }*/ 

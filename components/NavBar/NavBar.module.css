@@ -13,7 +13,7 @@
 
 /*------------ Barra de navegacion -------------*/
 .nav{
-    position: relative;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -95,20 +95,21 @@
 /*------------ Menu oculto-------------*/
 .menu, .menu2, .menu3{
     display: none;
+    list-style: none;
 }
 
 
 
 /*------------ Muestra menu hover -------------*/
-.system:hover > ul .menu{
+.system:hover .menu{
     display: flex;
 }
 
-.ng:hover > ul .menu2{
+.ng:hover .menu2{
     display: block;
 }
 
-.ventas:hover > ul .menu3{
+.ventas:hover .menu3{
     display: block;
 }
 
