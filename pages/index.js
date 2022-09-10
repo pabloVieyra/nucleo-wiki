@@ -9,12 +9,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-<<<<<<< HEAD
-      <HomePage />
-    </>
-=======
       <Formulario></Formulario>
-    </Stack>
->>>>>>> 0fa1972 (Formulario)
+    </>
   );
 }
