@@ -1,0 +1,7 @@
+.contenedor {
+    box-sizing: border-box;
+    width: 90px;
+    position: static;
+    
+    background: #121212;
+}
