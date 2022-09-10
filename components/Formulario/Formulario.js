@@ -1,6 +1,8 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-import estilos from "./Formulario.module.css";
+
+
+
 
 const Formulario = () => {
 
@@ -14,24 +16,45 @@ const Formulario = () => {
     }
 
   return (
-    <div>
-        <h1 className={estilos.title}>Sugerencias!</h1>
-        <form onSubmit={sendEmail} className={estilos.contenedor}>
-            <label className={estilos.label}></label>
-            <input type="text" name="user_name" required placeholder='Nombre de local' className={estilos.form} />
-
-            <label className={estilos.label}></label>
-            <input type="email" name="user_email" required placeholder='example@hotmail.com' className={estilos.form} />
-
-            <label className={estilos.label}></label>
-            <input type="tel" name="user_number" required placeholder='Telefono' className={estilos.form} />
-
-            <label className={estilos.label}></label>
-            <textarea name="user_message" placeholder='Mensaje' id="" cols="100" rows="10" className={estilos.textarea} ></textarea>
-
-            <button type="submit" id="btnEnviar" name="btnEnviar" className={estilos.button}>ENVIAR</button>
-        </form>
+    <div className="w-full bg-gray-800 h-screen">
+    <div className="bg-gradient-to-b from-black-800 to-black-600 h-96"></div>
+    <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
+        <div className="bg-gray-900 w-full shadow rounded p-8 sm:p-12 -mt-72">
+            <p className="text-3xl font-bold leading-7 text-center text-white">Sugerencias!!</p>
+            <form onSubmit={sendEmail} action="" method="post">
+                <div className="md:flex items-center mt-12">
+                    <div className="w-full md:w-1/2 flex flex-col">
+                        <label className="font-semibold leading-none text-gray-300">Nombre del local</label>
+                        <input type="text" name="user_name" className="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" />
+                    </div>
+                    <div className="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                        <label className="font-semibold leading-none text-gray-300">Telefono</label>
+                        <input type="tel" name="user_number" className="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded"/>
+                    </div>
+                </div>
+                <div className="md:flex items-center mt-8">
+                    <div className="w-full flex flex-col">
+                        <label className="font-semibold leading-none text-gray-300">Email</label>
+                        <input type="email" name="user_email" className="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded"/>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div className="w-full flex flex-col mt-8">
+                        <label className="font-semibold leading-none text-gray-300">Mensaje</label>
+                        <textarea type="text" name="user_message" className="h-40 text-base leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-800 border-0 rounded"></textarea>
+                    </div>
+                </div>
+                <div className="flex items-center justify-center w-full">
+                    <button className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
+                        ENVIAR
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
+    
   )
 }
 
