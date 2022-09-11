@@ -25,24 +25,24 @@ const Formulario = () => {
                 <div className="md:flex items-center mt-12">
                     <div className="w-full md:w-1/2 flex flex-col">
                         <label className="font-semibold leading-none text-gray-300">Nombre del local</label>
-                        <input type="text" name="user_name" className="border border-green-500 leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" required />
+                        <input type="text" name="user_name" className="border border-green-500 text-white leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" required />
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label className="font-semibold leading-none text-gray-300">Teléfono</label>
-                        <input type="tel" name="user_number" className="border border-green-500 leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" required />
+                        <input type="tel" name="user_number" className="border border-green-500 text-white leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" required />
                     </div>
                 </div>
                 <div className="md:flex items-center mt-8">
                     <div className="w-full flex flex-col">
                         <label className="font-semibold leading-none text-gray-300">Email</label>
-                        <input type="email" name="user_email" className=" border border-green-500 leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" required />
+                        <input type="email" name="user_email" className=" border border-green-500 text-white leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" required />
                     </div>
                     
                 </div>
                 <div>
                     <div className="w-full flex flex-col mt-8">
                         <label className="font-semibold leading-none text-gray-300">Mensaje</label>
-                        <textarea type="text" name="user_message" className="border border-green-500 h-40 text-base leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-800 border-0 rounded"></textarea>
+                        <textarea type="text" name="user_message" className="border border-green-500 text-white h-40 text-base leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-800 border-0 rounded"></textarea>
                     </div>
                 </div>
                 <div className="flex items-center justify-center w-full">
