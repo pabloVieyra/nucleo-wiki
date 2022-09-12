@@ -1,7 +1,68 @@
 .contenedor {
-    box-sizing: border-box;
     width: 90px;
-    position: static;
-    
-    background: #121212;
+    position: absolute;
+    height: 100vh;
+    background: #121212; 
+    top: 0;
+    bottom: 0;
+}
+.contenedor2 {
+    width: 200px;
+    position: absolute;
+    height: 100%;
+    left: 90px;
+    background: rgb(167, 167, 167);
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, .5);
+}
+
+.iconos {
+    position: relative;
+    list-style-type: none;
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px;
+    height: 50px;
+    transition: .3s ease;
+    border-radius: 10px 10px;
+    font-family: arial;
+    text-decoration: none;
+    color: #000;
+}
+.opcion {
+        display: flex;
+        align-items: center;
+        padding: 30px 30px;
+        height: 50px;
+        transition: .3s ease;
+        border-radius: 10px 10px;
+        font-family: arial;
+        text-decoration: none;
+        color: #000;
+}
+
+.icono:hover {
+    background: rgba(150, 150, 150, 0.35);
+}
+
+.listaOpciones {
+    position:absolute;
+    left: 90px;
+    width: 200px;
+    top: 0;
+    display: none;
+    background: rgb(167, 167, 167);
+    border-radius: 5px;
+}
+.opcion:hover {
+    background: rgba(8, 8, 8, 0.35);
+}
+
+.dropLista{
+    position: relative;
+}
+.dropLista:hover ul{
+    display: initial;
 }
