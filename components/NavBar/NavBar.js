@@ -10,6 +10,15 @@ const NavBar = () => {
     document.getElementsByClassName("menu").style = "display: flex";
   }*/
 
+  const menuNG = [
+    { id: 1, text: "Archivo" },
+    { id: 2, text: "Ingredientes" },
+    { id: 3, text: "Carta de Productos" },
+    { id: 4, text: "Ventas" },
+    { id: 5, text: "Compras" },
+    { id: 6, text: "Configuracion del Sistema" },
+  ];
+
   const menuArchivo = [
     { id: 1, text: "Empresas de Tarjetas" },
     { id: 2, text: "Tipos de Descuento" },
@@ -82,7 +91,7 @@ const NavBar = () => {
           >
             <a href="#" /*onClick={clickMenu}*/ className={estilos.fijo}>
               {" "}
-              Sistemas{" "}
+              Sistemas
             </a>
 
             <ul className={`${estilos.menuHorSystem} ${estilos.menu}`}>
@@ -219,7 +228,6 @@ const NavBar = () => {
                   </li>
                 </ul>
               </li>
-
               <li className={`${estilos.btn} ${estilos.g1} ${estilos.menu}`}>
                 <a href="#">G1</a>
               </li>
