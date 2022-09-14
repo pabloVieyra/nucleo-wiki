@@ -3,13 +3,13 @@ import estilos from "./NavBar.module.css";
 import logo from "../../public/Images/logo.png";
 import perfil from "../../public/Images/perfil.png";
 import Image from "next/image";
+<<<<<<< HEAD
 import Link from "next/link";
+=======
+import { useState } from "react";
+>>>>>>> 2656686 (OnClick navbar ok)
 
 const NavBar = () => {
-  /*function clickMenu() {
-    document.getElementsByClassName("menu").style = "display: flex";
-  }*/
-
   const System = [
     {
       id: 1,
@@ -145,6 +145,8 @@ const NavBar = () => {
     },
   ];
 
+  const [clicked, setClicked] = useState(false);
+
   return (
     <div className={estilos.todo}>
       <div className={estilos.nav}>
@@ -158,12 +160,19 @@ const NavBar = () => {
           <li
             className={`${estilos.NavBar} ${estilos.btn} ${estilos.selected1} ${estilos.eje}`}
           >
-            <a href="#" /*onClick={clickMenu}*/ className={estilos.fijo}>
+            <button
+              onClick={() => setClicked((current) => !current)}
+              className={estilos.fijo}
+            >
               {" "}
               Sistemas
-            </a>
+            </button>
 
-            <ul className={`${estilos.menuHorSystem} ${estilos.menu}`}>
+            <ul
+              className={`${estilos.menuHorSystem} ${
+                clicked ? `${estilos.muestra}` : `${estilos.menu}`
+              }`}
+            >
               {System.map((menu) => {
                 return (
                   <>
