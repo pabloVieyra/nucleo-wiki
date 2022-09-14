@@ -37,6 +37,7 @@
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
+    
 }
 
 
@@ -86,7 +87,7 @@
 
 
 /*------------ Hover verde -------------*/
-.nav .btn:hover > a{
+.nav .btn:hover > a, .nav .btn:hover > button{
     color: #577534;
     font-weight: bold;
 }
@@ -102,9 +103,9 @@
 
 
 /*------------ Muestra menu hover -------------*/
-.selected1:hover .menu{
+/*.selected1:hover .menu{
     display: flex;
-}
+}*/
 
 .selected2:hover .menu2{
     display: block;
@@ -136,3 +137,6 @@
 }
 
 
+.muestra{
+    display: flex;
+}
