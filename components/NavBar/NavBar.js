@@ -3,6 +3,7 @@ import estilos from "./NavBar.module.css";
 import logo from "../../public/Images/logo.png";
 import perfil from "../../public/Images/perfil.png";
 import Image from "next/image";
+import Link from 'next/link'
 
 const NavBar = () => {
   /*function clickMenu() {
@@ -238,7 +239,9 @@ const NavBar = () => {
           <li
             className={`${estilos.NavBar} ${estilos.btn} ${estilos.contact} ${estilos.eje}`}
           >
+            <Link href="/Formulario">
             <a>Contacto</a>
+            </Link>
           </li>
 
           <li className={`${estilos.perfil} ${estilos.eje}`}>
