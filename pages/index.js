@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <Formulario></Formulario>
+      <HomePage></HomePage>
     </>
   );
 }
