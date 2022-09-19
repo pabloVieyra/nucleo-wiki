@@ -1,49 +1,69 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useFormik } from "formik";
 
 const CategoriaPrueba = () => {
   const [component, setComponent] = useState("");
-  const changeComponent = () => {
-    fetch(`http://localhost:3000/api/componentes/`)
-      .then((response) => response.json())
-      .then((response) => {
-        const filtrado = response.filter((r) => r.tags == e);
-        setProducts(filtrado);
+
+  const formik = useFormik({
+    initialValues: {
+      Nombre: "",
+      Sistema: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+      PostCategoria(values);
+    },
+  });
+
+  const PostCategoria = (values) => {
+    axios
+      .post("http://localhost:3000/api/Categorias", {
+        nombre: values.Nombre,
+        sistema: 1,
       })
-      .catch((error) => {
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
         console.log(error);
       });
   };
   return (
-    <div className="bg-black p-10 blur">
-      <h1 className="text-white"> Categoria</h1>
+    <form className="bg-black p-10 blur" onSubmit={formik.handleSubmit}>
+      <h1 className="text-white text-4xl"> Categoria</h1>
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex  flex-col my-2">
         <div className="-mx-3 md:flex mb-6">
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              htmlFor="Nombre"
             >
               Nombre
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="Nombre"
               type="text"
               placeholder="Jane"
+              onChange={formik.handleChange}
+              value={formik.values.Name}
             />
-            <p className="text-red text-xs italic">huevos</p>
           </div>
           <div className="md:w-1/2 px-3">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-state"
+              htmlFor="Sistema"
             >
               Sistema
             </label>
             <div className="relative">
               <select
                 className="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
-                id="grid-state"
+                name="Sistema"
+                id="Sistema"
+                onChange={formik.handleChange}
+                value={formik.values.Sistema}
               >
                 <option>NG</option>
                 <option>G1</option>
@@ -64,10 +84,13 @@ const CategoriaPrueba = () => {
           </div>
         </div>
       </div>
-      <button onClick={changeComponent} className="text-white">
+      <button
+        onClick={formik.handleSubmit}
+        className="mt-3 font-semibold leading-none text-white py-5 px-5 bg-gradient-to-r from-green-500 to-blue-500 rounded rounded-full"
+      >
         enviar a la dev
       </button>
-    </div>
+    </form>
   );
 };
 
