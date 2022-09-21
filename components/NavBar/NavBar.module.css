@@ -52,6 +52,7 @@
     background-color: #1f1f1f;
 }
 
+
 .subMenu{
     left: 97%;
     top: 0px;
@@ -127,13 +128,14 @@
 
 .blurContainOn{
     opacity: 1;
-    transition: opacity 0.15s ;
+    transition: z-index 0.5s step-start, opacity 0.25s linear;
     z-index: 999;
 }
 
 .blurContainOff{
     opacity: 0;
-    transition: opacity 0.15s ;
+    transition: z-index 0.5s step-end, opacity 0.25s linear;
+    z-index: -10;
 }
 
 .blurContain{
@@ -142,9 +144,10 @@
     width: 100%;
     filter: blur(10px);
     background-color: rgba(20, 20, 20, 0.7);
-    
+   
     
 }
+
 
 
 
