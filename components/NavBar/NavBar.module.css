@@ -2,34 +2,20 @@
 
 
 
-.body {
-    background-color: #121212;
-    overflow-x: hidden;
-    margin:0;
-    padding:0; 
-}
-
-
-
 /*------------ Barra de navegacion -------------*/
- .nav{
+.nav{
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #1F1F1F;
     z-index: 1000;
     list-style: none;
+    background-color: #1f1f1f;
+    padding-right: 50px;
 }
 
 .nav.a{
     text-decoration: none;
-}
-
-.eje {
-    display: inline-block;
-    list-style-type: none;
-    background-color: #1F1F1F;
 }
 
 .NavBar{
@@ -37,49 +23,51 @@
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }
+
 
 
 
 
 
 /*------------ Menus -------------*/
-.menuHorSystem{
+.menuHor{
     position: absolute;
     left: 0px;
     top: 98%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    background-color: #1F1F1F;   
     width: 100%;
+    background-color: #1f1f1f;
 }
 
-.menuVerNg{
+.menuVer{
     position: absolute;
     top: 98%;
-    background-color: #1F1F1F;
+    background-color: #1f1f1f;
 }
 
-.subMenuVentas{
+.subMenu{
     left: 97%;
     top: 0px;
+    background-color: #1f1f1f;
 }
 
 
 
 /*------------ Estilo boton -------------*/
 .btn{
-    padding: 7px;
+    padding: 10px;
     font-family: inter;
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
-    width: 13vw;
-}
-
-.btn, .a{
+    width: 200px;
     transition: color 0.2s;
     color: white;
 }
@@ -87,9 +75,8 @@
 
 
 /*------------ Hover verde -------------*/
-.nav .btn:hover > a, .nav .btn:hover > button{
+.btn:hover > a, .btn:hover > button{
     color: #577534;
-    font-weight: bold;
 }
 
 
@@ -103,9 +90,7 @@
 
 
 /*------------ Muestra menu hover -------------*/
-/*.selected1:hover .menu{
-    display: flex;
-}*/
+
 
 .selected2:hover .menu2{
     display: block;
@@ -133,10 +118,59 @@
     width: 32px;
     height: 32px;
     margin-top: 10px;
-    margin-right: 15px;
 }
 
 
 .muestra{
     display: flex;
+} 
+
+.blurContainOn{
+    opacity: 1;
+    transition: opacity 0.15s ;
+    z-index: 999;
 }
+
+.blurContainOff{
+    opacity: 0;
+    transition: opacity 0.15s ;
+}
+
+.blurContain{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    background-color: rgba(20, 20, 20, 0.7);
+    
+    
+}
+
+
+
+
+
+/*
+.blur {
+    background: inherit;
+    z-index: 100;
+}
+ 
+.blur:before {
+    background: inherit;
+}
+
+.blur:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.blur:before {
+    background-color:  rgba(31, 31, 31, 0.601);
+    filter: blur(1px);
+    z-index: -1;
+}*/

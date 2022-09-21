@@ -7,7 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 =======
 import { useState } from "react";
+<<<<<<< HEAD
 >>>>>>> 2656686 (OnClick navbar ok)
+=======
+import ReactDOM from "react-dom/client";
+>>>>>>> 0c76b8f (Blur nav y detalles)
 
 const NavBar = () => {
   const System = [
@@ -147,6 +151,8 @@ const NavBar = () => {
 
   const [clicked, setClicked] = useState(false);
 
+  const [hover, setHover] = useState(false);
+
   return (
     <div className={estilos.todo}>
       <div className={estilos.nav}>
@@ -156,9 +162,9 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <ul>
+        <ul className={estilos.NavBar}>
           <li
-            className={`${estilos.NavBar} ${estilos.btn} ${estilos.selected1} ${estilos.eje}`}
+            className={` ${estilos.btn} ${estilos.selected1} ${estilos.eje} ${estilos.blur}`}
           >
             <button
               onClick={() => setClicked((current) => !current)}
@@ -169,19 +175,23 @@ const NavBar = () => {
             </button>
 
             <ul
-              className={`${estilos.menuHorSystem} ${
+              className={`${estilos.menuHor} ${
                 clicked ? `${estilos.muestra}` : `${estilos.menu}`
               }`}
             >
               {System.map((menu) => {
                 return (
                   <>
-                    <li className={`${estilos.btn} ${estilos.selected2}`}>
+                    <li
+                      onMouseEnter={() => setHover((current) => !current)}
+                      onMouseLeave={() => setHover((current) => !current)}
+                      className={`${estilos.btn} ${estilos.selected2}`}
+                    >
                       <a href="#" key={menu.id}>
                         {menu.text}
                       </a>
 
-                      <ul className={`${estilos.menuVerNg} ${estilos.menu2} `}>
+                      <ul className={`${estilos.menuVer} ${estilos.menu2}`}>
                         {menu.id.map((submenu) => {
                           return (
                             <>
@@ -192,7 +202,7 @@ const NavBar = () => {
                                   {submenu.text}
                                 </a>
                                 <ul
-                                  className={`${estilos.subMenuVentas} ${estilos.menuVerNg} ${estilos.menu3}`}
+                                  className={`${estilos.subMenu} ${estilos.menuVer} ${estilos.menu3}`}
                                 >
                                   {submenu.id.map((submenusub) => {
                                     return (
@@ -218,12 +228,17 @@ const NavBar = () => {
             </ul>
           </li>
 
+<<<<<<< HEAD
           <li
             className={`${estilos.NavBar} ${estilos.btn} ${estilos.contact} ${estilos.eje}`}
           >
             <Link href="/Contacto">
               <a>Contacto</a>
             </Link>
+=======
+          <li className={`${estilos.btn} ${estilos.contact}`}>
+            <button>Contacto</button>
+>>>>>>> 0c76b8f (Blur nav y detalles)
           </li>
 
           <li className={`${estilos.perfil} ${estilos.eje}`}>
@@ -231,6 +246,12 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
+
+      <div
+        className={`${estilos.blurContain} ${
+          hover ? `${estilos.blurContainOn}` : `${estilos.blurContainOff}`
+        }`}
+      ></div>
     </div>
   );
 };
