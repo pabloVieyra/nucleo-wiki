@@ -3,15 +3,9 @@ import estilos from "./NavBar.module.css";
 import logo from "../../public/Images/logo.png";
 import perfil from "../../public/Images/perfil.png";
 import Image from "next/image";
-<<<<<<< HEAD
 import Link from "next/link";
-=======
 import { useState } from "react";
-<<<<<<< HEAD
->>>>>>> 2656686 (OnClick navbar ok)
-=======
 import ReactDOM from "react-dom/client";
->>>>>>> 0c76b8f (Blur nav y detalles)
 
 const NavBar = () => {
   const System = [
@@ -558,17 +552,12 @@ const NavBar = () => {
             </ul>
           </li>
 
-<<<<<<< HEAD
           <li
             className={`${estilos.NavBar} ${estilos.btn} ${estilos.contact} ${estilos.eje}`}
           >
             <Link href="/Contacto">
               <a>Contacto</a>
             </Link>
-=======
-          <li className={`${estilos.btn} ${estilos.contact}`}>
-            <button>Contacto</button>
->>>>>>> 0c76b8f (Blur nav y detalles)
           </li>
 
           <li className={`${estilos.perfil} ${estilos.eje}`}>
