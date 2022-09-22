@@ -8,10 +8,27 @@ const CategoriaPrueba = () => {
   const formik = useFormik({
     initialValues: {
       Nombre: "",
-      Sistema: "",
+      Sistema: 1,
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      switch (values.Sistema) {
+        case "NG":
+          values.Sistema = 1;
+          break;
+        case "G1":
+          values.Sistema = 2;
+          break;
+        case "Check":
+          values.Sistema = 3;
+          break;
+        case "Fce":
+          values.Sistema = 4;
+          break;
+        case "Col":
+          values.Sistema = 5;
+          break;
+      }
       PostCategoria(values);
     },
   });
@@ -20,7 +37,7 @@ const CategoriaPrueba = () => {
     axios
       .post("http://localhost:3000/api/Categorias", {
         nombre: values.Nombre,
-        sistema: 1,
+        sistema: values.Sistema,
       })
       .then(function (response) {
         console.log(response);

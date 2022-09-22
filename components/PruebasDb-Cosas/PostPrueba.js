@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { useFormik } from "formik";
 
 const PostPrueba = () => {
   const changeComponent = () => {
@@ -12,21 +14,53 @@ const PostPrueba = () => {
         console.log(error);
       });
   };
+
+  const formik = useFormik({
+    initialValues: {
+      Nombre: "",
+      Categorias_id: 1,
+      Sistema: "",
+      Visitas: "",
+      Valoraciones: "",
+    },
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+      switch (values.Sistema) {
+        case "NG":
+          values.Sistema = 1;
+          break;
+        case "G1":
+          values.Sistema = 2;
+          break;
+        case "Check":
+          values.Sistema = 3;
+          break;
+        case "Fce":
+          values.Sistema = 4;
+          break;
+        case "Col":
+          values.Sistema = 5;
+          break;
+      }
+      PostCategoria(values);
+    },
+  });
+
   return (
-    <div className="bg-black p-10 blur">
+    <form className="bg-black p-10 blur" onSubmit={formik.handleSubmit}>
       <h1 className="text-white text-4xl">PostPrueba</h1>
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex  flex-col my-2">
         <div className="-mx-3 md:flex mb-6">
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              htmlFor="Nombre"
             >
               Nombre
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="Nombre"
               type="text"
               placeholder="Jane"
             />
@@ -35,13 +69,13 @@ const PostPrueba = () => {
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              htmlFor="Categorias_Id"
             >
               Categorias_Id
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="Categorias_Id"
               type="text"
               placeholder="Jane"
             />
@@ -51,13 +85,13 @@ const PostPrueba = () => {
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              htmlFor="Sistema"
             >
               Sistema
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="Sistema"
               type="text"
               placeholder="Jane"
             />
@@ -66,13 +100,13 @@ const PostPrueba = () => {
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              htmlFor="Visitas"
             >
               Visitas
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="Visitas"
               type="text"
               placeholder="Jane"
             />
@@ -80,13 +114,13 @@ const PostPrueba = () => {
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
+              htmlFor="Valoraciones"
             >
               Valoraciones
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-first-name"
+              id="Valoraciones"
               type="text"
               placeholder="Jane"
             />
@@ -99,7 +133,7 @@ const PostPrueba = () => {
       >
         enviar a la dev
       </button>
-    </div>
+    </form>
   );
 };
 
