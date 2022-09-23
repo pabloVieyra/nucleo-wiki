@@ -6,9 +6,7 @@ import NavBar from "../components/NavBar/NavBar";
 const Contacto = () => {
   return (
     <div>
-      <AppLayout>
-        <Formulario></Formulario>
-      </AppLayout>
+      <Formulario></Formulario>
     </div>
   );
 };

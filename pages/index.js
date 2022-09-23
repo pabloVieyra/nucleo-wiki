@@ -16,9 +16,8 @@ export default function Home() {
         <meta name="description" content="Nucle Wiki by Nucleo" />
         <link rel="icon" href="../public/favicon.ico" />
       </Head>
-      <AppLayout>
-        <HomePage></HomePage>
-      </AppLayout>
+
+      <HomePage></HomePage>
     </>
   );
 }
