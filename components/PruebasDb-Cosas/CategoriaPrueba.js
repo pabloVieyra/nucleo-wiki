@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import { useFormik } from "formik";
 
 const CategoriaPrueba = () => {
-  const [component, setComponent] = useState("");
-
   const formik = useFormik({
     initialValues: {
       Nombre: "",

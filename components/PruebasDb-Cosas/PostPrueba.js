@@ -3,25 +3,13 @@ import axios from "axios";
 import { useFormik } from "formik";
 
 const PostPrueba = () => {
-  const changeComponent = () => {
-    fetch(`http://localhost:3000/api/componentes/`)
-      .then((response) => response.json())
-      .then((response) => {
-        const filtrado = response.filter((r) => r.tags == e);
-        setProducts(filtrado);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   const formik = useFormik({
     initialValues: {
       Nombre: "",
       Categorias_id: 1,
-      Sistema: "",
-      Visitas: "",
-      Valoraciones: "",
+      Sistema: 1,
+      Visitas: 0,
+      Valoraciones: 1,
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -42,9 +30,26 @@ const PostPrueba = () => {
           values.Sistema = 5;
           break;
       }
-      PostCategoria(values);
+      PostDelPost(values);
     },
   });
+
+  const PostDelPost = (values) => {
+    axios
+      .post("http://localhost:3000/api/Post", {
+        nombre: values.Nombre,
+        categoria_id: values.Categoria,
+        sistema: values.Sistema,
+        visitas: values.Visitas,
+        valoraciones: values.Valoraciones,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <form className="bg-black p-10 blur" onSubmit={formik.handleSubmit}>
@@ -128,7 +133,7 @@ const PostPrueba = () => {
         </div>
       </div>
       <button
-        onClick={changeComponent}
+        onClick={formik.handleSubmit}
         className="mt-3 font-semibold leading-none text-white py-5 px-5 bg-gradient-to-r from-green-500 to-blue-500 rounded rounded-full"
       >
         enviar a la dev
