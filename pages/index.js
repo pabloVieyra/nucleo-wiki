@@ -7,7 +7,6 @@ import HomePage from "../components/Home/HomePage";
 import Dashboard from "../components/Dashboard/Dashboard";
 import Footer from "../components/Footer/Footer";
 import AppLayout from "../components/AppLayout/AppLayout";
-import Homedash from "/components/Homedash/Homedash";
 
 export default function Home() {
   return (
@@ -17,8 +16,7 @@ export default function Home() {
         <meta name="description" content="Nucle Wiki by Nucleo" />
         <link rel="icon" href="../public/favicon.ico" />
       </Head>
-      <Dashboard></Dashboard>
-      <Homedash></Homedash>
+      <HomePage></HomePage>
     </>
   );
 }
