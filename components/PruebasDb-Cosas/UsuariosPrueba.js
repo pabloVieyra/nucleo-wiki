@@ -27,9 +27,11 @@ const UsuariosPrueba = () => {
       })
       .then(function (response) {
         console.log(response);
+        Swal.fire("Good job! Aprobado", response.statusText, "success");
       })
       .catch(function (error) {
         console.log(error);
+        Swal.fire("Error!", error.response.data.error, "error");
       });
   };
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useFormik } from "formik";
+import Swal from "sweetalert2";
 
 const CategoriaPrueba = () => {
   const formik = useFormik({
@@ -39,9 +40,11 @@ const CategoriaPrueba = () => {
       })
       .then(function (response) {
         console.log(response);
+        Swal.fire("Good job! Aprobado", response.statusText, "success");
       })
       .catch(function (error) {
         console.log(error);
+        Swal.fire("Error!", error.response.data.error, "error");
       });
   };
   return (
