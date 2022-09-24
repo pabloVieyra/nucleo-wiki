@@ -1,15 +1,23 @@
-import Imagen from "../components/Post/Imagen";
-import Parrafo from "../components/Post/parrafo";
-import Sub1 from "../components/Post/sub1";
-import Sub2 from "../components/Post/sub2";
+import ImagenPost from "../components/Post/Imagen";
+import ParrafoPost from "../components/Post/Parrafo";
+import VideoPost from "../components/Post/Video";
+import H1Post from "../components/Post/H1";
+import H2Post from "../components/Post/H2";
+import H3Post from "../components/Post/H3";
+import NavBar from "../components/NavBar/NavBar";
 
 const Post = () => {
   return (
     <div>
-      <Imagen></Imagen>
-      <Parrafo> </Parrafo>
-      <Sub1></Sub1>
-      <Sub2></Sub2>
+      <NavBar />
+      <H1Post></H1Post>
+      <H2Post></H2Post>
+      <VideoPost></VideoPost>
+      <H3Post></H3Post>
+      <ParrafoPost> </ParrafoPost>
+      <H3Post></H3Post>
+      <ParrafoPost> </ParrafoPost>
+      <ImagenPost></ImagenPost>
     </div>
   );
 };
