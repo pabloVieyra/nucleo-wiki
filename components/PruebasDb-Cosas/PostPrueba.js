@@ -8,7 +8,7 @@ const PostPrueba = () => {
       Nombre: "",
       Categorias_id: 1,
       Sistema: 1,
-      Visitas: 0,
+      Visitas: 1,
       Valoraciones: 1,
     },
     onSubmit: (values) => {
@@ -38,7 +38,7 @@ const PostPrueba = () => {
     axios
       .post("http://localhost:3000/api/Post", {
         nombre: values.Nombre,
-        categoria_id: values.Categoria,
+        categoria_id: values.Categorias_id,
         sistema: values.Sistema,
         visitas: values.Visitas,
         valoraciones: values.Valoraciones,
@@ -68,6 +68,8 @@ const PostPrueba = () => {
               id="Nombre"
               type="text"
               placeholder="Jane"
+              onChange={formik.handleChange}
+              value={formik.values.Nombre}
             />
           </div>
 
@@ -81,25 +83,45 @@ const PostPrueba = () => {
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
               id="Categorias_Id"
-              type="text"
+              type="number"
               placeholder="Jane"
+              onChange={formik.handleChange}
+              value={formik.values.Categorias_Id}
             />
           </div>
         </div>
         <div className="-mx-3 md:flex mb-6">
-          <div className="md:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="md:w-1/2 px-3">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
               htmlFor="Sistema"
             >
               Sistema
             </label>
-            <input
-              className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="Sistema"
-              type="text"
-              placeholder="Jane"
-            />
+            <div className="relative">
+              <select
+                className="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
+                name="Sistema"
+                id="Sistema"
+                onChange={formik.handleChange}
+                value={formik.values.Sistema}
+              >
+                <option>NG</option>
+                <option>G1</option>
+                <option>Check</option>
+                <option>Fce</option>
+                <option>Col</option>
+              </select>
+              <div className="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
+                <svg
+                  className="h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+            </div>
           </div>
 
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -112,8 +134,10 @@ const PostPrueba = () => {
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
               id="Visitas"
-              type="text"
+              type="number"
               placeholder="Jane"
+              onChange={formik.handleChange}
+              value={formik.values.Visitas}
             />
           </div>
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -126,8 +150,10 @@ const PostPrueba = () => {
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
               id="Valoraciones"
-              type="text"
+              type="number"
               placeholder="Jane"
+              onChange={formik.handleChange}
+              value={formik.values.Valoraciones}
             />
           </div>
         </div>
