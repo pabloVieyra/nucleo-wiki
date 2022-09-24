@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
+import Swal from "sweetalert2";
 
 const PostPrueba = () => {
   const formik = useFormik({
