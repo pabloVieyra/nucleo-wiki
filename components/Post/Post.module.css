@@ -1,0 +1,39 @@
+.componentPost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: white;
+    padding: 1%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.H1{
+    justify-content: flex-start;
+    color: #BDD816;
+    font-weight: bold;
+    padding-left: 2%;
+    font-size: 26px;
+}
+
+.H2{
+    color: #BDD816;
+    font-size: 22px;
+}
+
+.H3{
+    justify-content: flex-start;
+    color: #BDD816; 
+    font-size: 18px;
+}
+
+.Ruta{
+    
+    justify-content: flex-start;
+    color: #BDD816;
+    padding-left: 1%;
+    font-size: 26px;
+}
