@@ -2,25 +2,26 @@ import React from "react";
 import { useFormik } from "formik";
 import Image from "next/image";
 import logowiki from "../../public/Images/logowiki.png";
-import * as yup from 'yup';
-
+import * as yup from "yup";
 
 const Login = () => {
   const formik = useFormik({
-    initialValues:{
-      name:"",
-      password:"",
+    initialValues: {
+      name: "",
+      password: "",
     },
-    
+
     validationSchema: yup.object({
-      name: yup.string()
-      .min(3, 'Demaciado corto!')
-      .max(7, 'Demaciado largo!')
-      .required(),
-      password: yup.string()
-      .min(3, 'Demaciado corto!')
-      .max(7, 'Demaciado largo!')
-      .required(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i),
+      name: yup
+        .string()
+        .min(3, "Demaciado corto!")
+        .max(7, "Demaciado largo!")
+        .required(),
+      password: yup
+        .string()
+        .min(3, "Demaciado corto!")
+        .max(7, "Demaciado largo!")
+        .required(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i),
     }),
     onSubmit: (formData, values) => {
       console.log(formData);
@@ -37,10 +38,7 @@ const Login = () => {
               Núcleo<span className="text-green-600">Wiki</span>
             </h2>
             <div className="grid place-items-center ">
-              <Image
-                src={logowiki}
-                alt="check"
-              ></Image>
+              <Image src={logowiki} alt="check"></Image>
             </div>
           </div>
           <div>
@@ -89,16 +87,15 @@ const Login = () => {
                   <input type="checkbox" id="remember" />
                   <label className="mx-2 text-sm">Mantenerme conectado</label>
                 </div>
-
-                
               </div>
               <div className="my-10">
-                <button className="w-full rounded-full bg-green-600 p-2 hover:bg-gray-800 font-bold"
-                type="button" 
-                onClick={() => validateField('name, password')}>
+                <button
+                  className="w-full rounded-full bg-green-600 p-2 hover:bg-gray-800 font-bold"
+                  type="button"
+                  onClick={() => validateField("name, password")}
+                >
                   INICIAR SESION
                 </button>
-                
               </div>
             </form>
           </div>
@@ -108,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login
+export default Login;
