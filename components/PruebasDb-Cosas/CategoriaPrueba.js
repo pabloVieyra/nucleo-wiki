@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
 
 const CategoriaPrueba = () => {
+  const [categorias, setCategorias] = useState([]);
+
   const formik = useFormik({
     initialValues: {
       Nombre: "",
@@ -47,6 +49,23 @@ const CategoriaPrueba = () => {
         Swal.fire("Error!", error.response.data.error, "error");
       });
   };
+
+  const GetCategoria = () => {
+    axios
+      .get("http://localhost:3000/api/Categorias")
+      .then((response) => {
+        console.log(response.data);
+        setCategorias(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    GetCategoria();
+  }, [PostCategoria]);
+
   return (
     <form className="bg-black p-10 blur" onSubmit={formik.handleSubmit}>
       <h1 className="text-white text-4xl"> Categoria</h1>
@@ -108,6 +127,59 @@ const CategoriaPrueba = () => {
       >
         enviar a la dev
       </button>
+
+      <div className="flex flex-col">
+        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+              <table className="min-w-full text-center border-b bg-blue-100 border-blue-200">
+                <thead className="border-b">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Id
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Nombre
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Sistema
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {categorias.map((categoria) => {
+                    return (
+                      <tr
+                        className="border-b bg-gray-800 boder-gray-900"
+                        key={categoria.id}
+                      >
+                        <td className="text-sm text-white font-medium px-6 py-4 whitespace-nowrap">
+                          {categoria.id}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {categoria.nombre}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {categoria.sistema}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
   );
 };
