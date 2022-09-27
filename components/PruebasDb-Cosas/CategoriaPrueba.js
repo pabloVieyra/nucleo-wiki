@@ -64,7 +64,7 @@ const CategoriaPrueba = () => {
 
   useEffect(() => {
     GetCategoria();
-  }, [PostCategoria]);
+  }, [categorias]);
 
   return (
     <form className="bg-black p-10 blur" onSubmit={formik.handleSubmit}>
