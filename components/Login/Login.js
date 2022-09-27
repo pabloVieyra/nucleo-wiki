@@ -93,6 +93,8 @@ const Login = () => {
                   className="w-full rounded-full bg-green-600 p-2 hover:bg-gray-800 font-bold"
                   type="button"
                   onClick={() => validateField("name, password")}
+                  type="button"
+                  onClick={() => validateField("name, password")}
                 >
                   INICIAR SESION
                 </button>
