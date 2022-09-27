@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
 
 const PostPrueba = () => {
+  const [posts, setPosts] = useState([]);
+
   const formik = useFormik({
     initialValues: {
       Nombre: "",
@@ -53,6 +55,22 @@ const PostPrueba = () => {
         Swal.fire("Error!", error.response.data.error, "error");
       });
   };
+
+  const GetPost = () => {
+    axios
+      .get("http://localhost:3000/api/Post")
+      .then((response) => {
+        console.log(response.data);
+        setPosts(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    GetPost();
+  }, [posts]);
 
   return (
     <form className="bg-black p-10 blur" onSubmit={formik.handleSubmit}>
@@ -167,6 +185,85 @@ const PostPrueba = () => {
       >
         enviar a la dev
       </button>
+      <div className="flex flex-col">
+        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+              <table className="min-w-full text-center border-b bg-blue-100 border-blue-200">
+                <thead className="border-b">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Id
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Nombre
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      categoria_id
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      sistema
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      visitas
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      valoraciones
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {posts.map((post) => {
+                    return (
+                      <tr
+                        className="border-b bg-gray-800 boder-gray-900"
+                        key={post.id}
+                      >
+                        <td className="text-sm text-white font-medium px-6 py-4 whitespace-nowrap">
+                          {post.id}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {post.nombre}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {post.categoria_id}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {post.sistema}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {post.visitas}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {post.valoraciones}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
   );
 };

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
 
 const ComponentsPrueba = () => {
+  const [components, setComponents] = useState([]);
   const formik = useFormik({
     initialValues: {
       Tipo: 1,
@@ -33,6 +34,22 @@ const ComponentsPrueba = () => {
         Swal.fire("Error!", error.response.data.error, "error");
       });
   };
+
+  const GetComponent = () => {
+    axios
+      .get("http://localhost:3000/api/Componentes")
+      .then((response) => {
+        console.log(response.data);
+        setComponents(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    GetComponent();
+  }, [components]);
 
   return (
     <div className="bg-black p-10 blur">
@@ -115,6 +132,77 @@ const ComponentsPrueba = () => {
       >
         enviar a la dev
       </button>
+
+      <div className="flex flex-col">
+        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+              <table className="min-w-full text-center border-b bg-blue-100 border-blue-200">
+                <thead className="border-b">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Id
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      Tipo
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      valor
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      orden
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium text-gray-900 px-6 py-4"
+                    >
+                      post_id
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {components.map((component) => {
+                    return (
+                      <tr
+                        className="border-b bg-gray-800 boder-gray-900"
+                        key={component.id}
+                      >
+                        <td className="text-sm text-white font-medium px-6 py-4 whitespace-nowrap">
+                          {component.id}
+                        </td>
+                        <td className="text-sm text-white font-medium px-6 py-4 whitespace-nowrap">
+                          {component.tipo}
+                        </td>
+                        <td className="text-sm text-white font-medium px-6 py-4 whitespace-nowrap">
+                          {component.valor}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {component.orden}
+                        </td>
+                        <td className="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                          {component.post_id}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
