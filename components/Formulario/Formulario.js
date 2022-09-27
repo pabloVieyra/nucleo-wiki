@@ -20,7 +20,7 @@ const Formulario = () => {
     <div>
       <section
         id="contact"
-        className="relative w-full min-h-screen bg-black text-red-500"
+        className="relative w-full min-h-screen bg-black text-green-500"
       >
         <h1 className="text-4xl p-4 font-bold tracking-wide text-white">
           Contacto
@@ -135,7 +135,7 @@ const Formulario = () => {
                   type="text"
                   name="user_name"
                   required
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 />
               </div>
               <div className="flex flex-col mb-3">
@@ -144,7 +144,7 @@ const Formulario = () => {
                   type="tel"
                   name="user_number"
                   required
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 />
               </div>
               <div className="flex flex-col mb-3">
@@ -153,7 +153,7 @@ const Formulario = () => {
                   type="text"
                   name="user_email"
                   required
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 />
               </div>
               <div className="flex flex-col mb-3">
@@ -161,7 +161,7 @@ const Formulario = () => {
                 <textarea
                   rows="4"
                   name="user_message"
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 ></textarea>
               </div>
             </div>
