@@ -20,21 +20,14 @@ const Formulario = () => {
     <div>
       <section
         id="contact"
-        className="relative w-full min-h-screen bg-black text-red-500"
+        className="relative w-full min-h-screen bg-black text-green-500"
       >
-        <h1 className="text-4xl p-4 font-bold tracking-wide text-white">
-          Contacto
-        </h1>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32 w-full"></div>
 
         <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
           <div className="w-full md:w-1/2 p-5 md:px-0 mx-5">
-            <div className="bg-gray-900 border border-green-500 w-full lg:w-1/2 h-full p-5 pt-8 ">
-              <h3 className="text-2xl font-semibold mb-5 text-white">
-                Redes sociales
-              </h3>
-
-              <div className="flex flex-col gap-3">
+            <div className="rounded-lg bg-gray-900 border border-green-500 lg:w-1/2 h-full p-5 pt-8 ">
+              <div className="flex flex-col">
                 <a
                   href="https://api.whatsapp.com/send?phone=5491132777917"
                   className="flex items-center hover:text-white hover:bg-green-500 p-2 text-white"
@@ -123,50 +116,52 @@ const Formulario = () => {
           <form
             onSubmit={sendEmail}
             action="#"
-            className="w-full md:w-1/2 border border-green-500 p-6 bg-gray-900"
+            className="rounded-lg md:w-1/2 border border-green-500 pt-2 px-8 bg-gray-900"
           >
             <h2 className="text-2xl pb-3 font-semibold text-white">
               Sugerencias
             </h2>
             <div>
               <div className="flex flex-col mb-3">
-                <label className="text-white">Nombre del local</label>
+                <label className="text-white text-sm pb-3">
+                  Nombre del local
+                </label>
                 <input
                   type="text"
                   name="user_name"
                   required
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="rounded-lg text-sm px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 />
               </div>
               <div className="flex flex-col mb-3">
-                <label className="text-white">Teléfono</label>
+                <label className="text-white text-sm pb-3">Teléfono</label>
                 <input
                   type="tel"
                   name="user_number"
                   required
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="rounded-lg text-sm px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 />
               </div>
               <div className="flex flex-col mb-3">
-                <label className="text-white">Email</label>
+                <label className="text-white text-sm pb-3">Email</label>
                 <input
                   type="text"
                   name="user_email"
                   required
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="rounded-lg text-sm px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 />
               </div>
               <div className="flex flex-col mb-3">
-                <label className="text-white">Mensaje</label>
+                <label className="text-white text-sm pb-3">Mensaje</label>
                 <textarea
                   rows="4"
                   name="user_message"
-                  className="px-3 py-2 bg-gray-800 border border-green-900 focus:border-red-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
+                  className="rounded-lg text-sm px-3 py-2 bg-gray-800 border border-green-900 focus:border-white-500 focus:outline-none focus:bg-gray-800 focus:text-green-500"
                 ></textarea>
               </div>
             </div>
-            <div className="w-full pt-3">
-              <button className="mt-10 font-semibold leading-none text-white py-5 px-10 bg-gradient-to-r from-green-500 to-blue-500 rounded rounded-full">
+            <div className="w-full pt-3 pb-3 grid place-items-center">
+              <button className="font-semibold leading-none text-white py-3 px-10  rounded rounded-full bg-green-600 p-2 hover:bg-gray-800 font-bold">
                 ENVIAR
               </button>
             </div>

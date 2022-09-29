@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from "next/image";
+import logowiki from "../../public/Images/logowiki.png";
 
 
 
@@ -11,8 +13,11 @@ const Footer = () => {
 						<h2 className="text-gray-800 font-bold text-3xl pb-6">
 							Núcleo<span className="text-green-600">Wiki</span>
 						</h2>
-						<div className="flex gap-6 pb-5">
-            Logo de núcleo wiki
+						<div className="flex gap-6 pb-5 grid place-items-center">
+							<Image
+                src={logowiki}
+                alt="check"
+              ></Image>
 						</div>
 					</ul>
 				</div>

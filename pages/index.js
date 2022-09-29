@@ -4,7 +4,7 @@ import Image from "next/image";
 import Formulario from "../components/Formulario/Formulario";
 import NavBar from "../components/NavBar/NavBar";
 import HomePage from "../components/Home/HomePage";
-import Dashboard from "../components/Dashboard/Dashboard";
+import Login from "../components/Login/Login";
 import Footer from "../components/Footer/Footer";
 import AppLayout from "../components/AppLayout/AppLayout";
 
