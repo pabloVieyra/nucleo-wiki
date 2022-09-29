@@ -6,9 +6,8 @@ import Homedash from "/components/Homedash/Homedash";
 const HomeDashboard = () => {
   return (
     <div>
-      <Dashboard>
-        <Homedash></Homedash>
-      </Dashboard>
+      <Dashboard> </Dashboard>
+      <Homedash></Homedash>
     </div>
   );
 };
