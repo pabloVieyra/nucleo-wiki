@@ -1,13 +1,8 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import AppLayout from "../components/AppLayout/AppLayout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <ChakraProvider>
-      <Component {...pageProps} />
-    </ChakraProvider>
-  );
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;

@@ -1,11 +1,6 @@
-import { Stack } from "@chakra-ui/react";
 import Head from "next/head";
-import Image from "next/image";
-import Formulario from "../components/Formulario/Formulario";
-import NavBar from "../components/NavBar/NavBar";
 import HomePage from "../components/Home/HomePage";
-import Login from "../components/Login/Login";
-import Footer from "../components/Footer/Footer";
+import Dashboard from "../components/Dashboard/Dashboard";
 import AppLayout from "../components/AppLayout/AppLayout";
 
 export default function Home() {
@@ -20,3 +15,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.getLayout = function getLayout(page) {
+  return <AppLayout>{page}</AppLayout>;
+};

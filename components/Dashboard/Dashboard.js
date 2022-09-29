@@ -8,7 +8,7 @@ import logocheck from "../../public/Images/check.png";
 import logofce from "../../public/Images/fce.png";
 import logousuario from "../../public/Images/usuario.png";
 
-const Dashboard = () => {
+const Dashboard = ({ children }) => {
   return (
     <div>
       {/* SIDEBAR */}
@@ -59,6 +59,7 @@ const Dashboard = () => {
           </div>
         </ul>
       </nav>
+      {children}
     </div> /* FIN SIDEBAR */
   );
 };
