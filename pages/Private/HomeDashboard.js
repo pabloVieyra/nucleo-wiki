@@ -4,7 +4,7 @@ import Homedash from "/components/Homedash/Homedash";
 
 const HomeDashboard = () => {
   return (
-    <div>
+    <div className=" bg-gray-900 ">
       <Homedash></Homedash>
     </div>
   );

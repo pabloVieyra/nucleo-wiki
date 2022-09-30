@@ -7,7 +7,7 @@ const CardHome = () => {
         <div className="p-10 text-gray-600">
           {/* Texto */}
           <div className="flex flex-row text-xl items-center justify-center">
-            <h1 className="">Productos</h1>
+            <h1 className="">Productos </h1>
           </div>
         </div>
         {/* Botones */}
