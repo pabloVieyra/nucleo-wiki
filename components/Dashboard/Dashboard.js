@@ -12,7 +12,7 @@ const Dashboard = ({ children }) => {
   return (
     <div>
       {/* SIDEBAR */}
-      <nav className={estilos.contenedor}>
+      <div className={estilos.contenedor}>
         <ul className={estilos.listaIconos}>
           {/* Logo Superior */}
           <div className={estilos.logoPrincipal}>
@@ -58,7 +58,7 @@ const Dashboard = ({ children }) => {
             </li>
           </div>
         </ul>
-      </nav>
+      </div>
       {children}
     </div> /* FIN SIDEBAR */
   );
