@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import Image from "next/image";
 import logowiki from "../../public/Images/logowiki.png";
 import * as yup from "yup";
+import Link from "next/link";
 
 const Login = () => {
   const formik = useFormik({
@@ -38,7 +39,9 @@ const Login = () => {
               Núcleo<span className="text-green-600">Wiki</span>
             </h2>
             <div className="grid place-items-center ">
-              <Image src={logowiki} alt="check"></Image>
+              <Link href="/Private/HomeDashboard">
+                <Image src={logowiki} alt="check"></Image>
+              </Link>
             </div>
           </div>
           <div>
