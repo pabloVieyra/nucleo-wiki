@@ -3,9 +3,9 @@ import estilos from "./NavBar.module.css";
 import logo from "../../public/Images/logo.png";
 import perfil from "../../public/Images/perfil.png";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
+import Link from "next/link";
 
 const NavBar = () => {
   const System = [
@@ -561,7 +561,9 @@ const NavBar = () => {
           </li>
 
           <li className={`${estilos.perfil} ${estilos.eje}`}>
-            <Image src={perfil} alt="perfil"></Image>
+            <Link href="/LoginPage">
+              <Image src={perfil} alt="perfil"></Image>
+            </Link>
           </li>
         </ul>
       </div>
