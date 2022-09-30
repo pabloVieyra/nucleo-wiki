@@ -1,35 +1,20 @@
 import React, { useState } from "react";
-import { Input } from "@chakra-ui/react";
+import CategoriaPrueba from "../components/PruebasDb-Cosas/CategoriaPrueba";
+import ComponentsPrueba from "../components/PruebasDb-Cosas/ComponentsPrueba";
+import FavoritosPrueba from "../components/PruebasDb-Cosas/FavoritosPrueba";
+import PostPrueba from "../components/PruebasDb-Cosas/PostPrueba";
+import UsuariosPrueba from "../components/PruebasDb-Cosas/UsuariosPrueba";
 
 const Pruebadb = () => {
-  const [component, setComponent] = useState("");
-
-  const changeComponent = () => {
-    fetch(`http://localhost:3000/api/componentes/`)
-      .then((response) => response.json())
-      .then((response) => {
-        const filtrado = response.filter((r) => r.tags == e);
-        setProducts(filtrado);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   return (
-    <div>
-      <h1>Prueba db</h1>
-      {/* tipo */}
-      <Input></Input>
-      {/* valor */}
-      <Input></Input>
-      {/* orden */}
-      <Input></Input>
-      {/* estado */}
-      <Input></Input>
-      {/* post_id */}
-      <Input></Input>
-      <button onClick={changeComponent}> enviar a la dev</button>
+    <div className="bg-gray-900 p-2 flex justify-center  ">
+      <div className="bg-black w-3/4">
+        <CategoriaPrueba></CategoriaPrueba>
+        <ComponentsPrueba></ComponentsPrueba>
+        <FavoritosPrueba></FavoritosPrueba>
+        <PostPrueba></PostPrueba>
+        <UsuariosPrueba></UsuariosPrueba>
+      </div>
     </div>
   );
 };

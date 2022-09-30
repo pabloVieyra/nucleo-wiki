@@ -1,7 +1,8 @@
-import Head from "next/head";
+import NavBar from "../components/NavBar/NavBar";
 import HomePage from "../components/Home/HomePage";
 import Dashboard from "../components/Dashboard/Dashboard";
 import AppLayout from "../components/AppLayout/AppLayout";
+import Head from "next/head";
 
 export default function Home() {
   return (
