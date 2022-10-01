@@ -11,8 +11,8 @@ const Homedash = () => {
       <div className="flex justify-center">
         <Image src={image} alt="Puto" width={150} height={150} />
       </div>
-      <div className="flex flex-row">
-        <div className="w-48 mt-10  ml-40 flex flex-col   ">
+      <div className="flex justify-between">
+        <div className="w-60 mt-10  ml-40 flex flex-col   ">
           <h1 className="text-white"> Categorias</h1>
           <form className=" mt-2 flex items-center">
             <label htmlFor="simple-search" className="sr-only">
@@ -80,7 +80,7 @@ const Homedash = () => {
           </select>
         </div>
 
-        <div className="flex-col-reverse mt-10  ml-40    ">
+        <div className="flex-col-reverse mt-10  ml-40 mr-10    ">
           <div className="flex justify-end  ">
             <input type="checkbox" id="choose-me" className="peer hidden" />
             <label
