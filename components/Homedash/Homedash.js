@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Image from "next/image";
 
 import CardHome from "../CardHome/CardHome";
@@ -6,9 +7,27 @@ import CardNewPost from "../CardHome/CardNewPost";
 import image from "../../public/Images/ng.png";
 
 const Homedash = () => {
+  const [posts, setPosts] = useState([]);
+
+  const GetPost = () => {
+    axios
+      .get("http://localhost:3000/api/Post")
+      .then((response) => {
+        console.log(response.data);
+        setPosts(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    GetPost();
+  }, []);
+
   return (
     <>
-      <div className="flex justify-center">
+      <div className=" flex justify-center">
         <Image src={image} alt="Puto" width={150} height={150} />
       </div>
       <div className="flex justify-between">
@@ -105,30 +124,13 @@ const Homedash = () => {
       </div>
       <div className="ml-20 md:ml-10 xl:ml-20  ">
         <div className=" flex justify-center grid grid-cols-3 gap-4  md:grid-cols-3 md:ml-10 xl:grid-cols-4 xl:ml-10  ">
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
-          <CardHome></CardHome>
+          {posts.map((post) => {
+            return (
+              <>
+                <CardHome nombre={post.nombre}></CardHome>
+              </>
+            );
+          })}
         </div>
       </div>
     </>
