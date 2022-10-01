@@ -103,8 +103,8 @@ const Homedash = () => {
           </div>
         </div>
       </div>
-      <div className="ml-40 md:ml-20 xl:ml-40  ">
-        <div className=" flex justify-center grid grid-cols-3 gap-4  md:grid-cols-3 md:ml-10 xl:grid-cols-4 xl:ml-20  ">
+      <div className="ml-20 md:ml-10 xl:ml-20  ">
+        <div className=" flex justify-center grid grid-cols-3 gap-4  md:grid-cols-3 md:ml-10 xl:grid-cols-4 xl:ml-10  ">
           <CardHome></CardHome>
           <CardHome></CardHome>
           <CardHome></CardHome>
