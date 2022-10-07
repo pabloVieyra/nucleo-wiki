@@ -7,8 +7,9 @@ import H3Post from "../components/Post/H3";
 import Separador from "../components/Post/Separador";
 import Componentes from "../components/Post/Utilities/Components";
 import estilos from "../components/Post/Post.module.css";
+import AppLayout from "../components/AppLayout/AppLayout";
 
-export default function App() {
+export default function Post() {
   const filtracion = () => {
     Componentes.sort(function (a, b) {
       if (a.orden > b.orden) {
@@ -57,3 +58,7 @@ export default function App() {
     </div>
   );
 }
+
+Post.getLayout = function getLayout(page) {
+  return <AppLayout>{page}</AppLayout>;
+};
