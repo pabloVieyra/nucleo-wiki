@@ -5,8 +5,8 @@ import H1Post from "../components/Post/H1";
 import H2Post from "../components/Post/H2";
 import H3Post from "../components/Post/H3";
 import Separador from "../components/Post/Separador";
-import Componentes from "../Components/Post/Utilities/Components";
-import estilos from "../Components/Post/Post.module.css";
+import Componentes from "../components/Post/Utilities/Components";
+import estilos from "../components/Post/Post.module.css";
 
 export default function App() {
   const filtracion = () => {
