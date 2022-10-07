@@ -4,7 +4,7 @@
 
 /*------------ Barra de navegacion -------------*/
 .nav{
-    position: relative;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -56,19 +56,22 @@
 .subMenu{
     left: 97%;
     top: 0px;
+    
     background-color: #1f1f1f;
+    overflow: scroll;
+    max-height: 80vh;
 }
 
 
 
 /*------------ Estilo boton -------------*/
 .btn{
-    padding: 10px;
+    padding: 5px;
     font-family: inter;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1.2vw;
     text-decoration: none;
-    width: 200px;
+    width: 10vw;
     transition: color 0.2s;
     color: white;
 }
@@ -140,7 +143,7 @@
 
 .blurContain{
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     filter: blur(10px);
     background-color: rgba(20, 20, 20, 0.7);

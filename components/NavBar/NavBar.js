@@ -64,7 +64,7 @@ const NavBar = () => {
             { id: 1, text: "Clientes" },
             { id: 2, text: "Cuenta de Clientes" },
             { id: 3, text: "Salon" },
-            { id: 4, text: "Delivery/Mostrador" },
+            { id: 4, text: "Delivery Mostrador" },
             { id: 5, text: "Monitor de Cocina" },
             { id: 6, text: "Historial de Pedidos" },
             { id: 7, text: "Historial de Facturas" },
@@ -332,7 +332,7 @@ const NavBar = () => {
             { id: 1, text: "Clientes" },
             { id: 2, text: "Cuenta de Clientes" },
             { id: 3, text: "Salon" },
-            { id: 4, text: "Delivery/Mostrador" },
+            { id: 4, text: "Delivery Mostrador" },
             { id: 5, text: "Monitor de Cocina" },
             { id: 6, text: "Historial de Pedidos" },
             { id: 7, text: "Historial de Facturas" },
@@ -443,6 +443,71 @@ const NavBar = () => {
         {
           id: 4,
           text: "Gastos",
+          id: [{ id: 1, text: "Historial de Gastos" }],
+        },
+        {
+          id: 5,
+          text: "Fondos",
+          id: [
+            { id: 1, text: "Movimientos Manuales de Caja" },
+            { id: 2, text: "Cierres de Caja" },
+            { id: 3, text: "Cajas Adicionales" },
+          ],
+        },
+        {
+          id: 6,
+          text: "Auditoria",
+          id: [
+            { id: 1, text: "Auditoria de Pedidos Anulados" },
+            { id: 2, text: "Auditoria del Salon" },
+            { id: 3, text: "Auditoria del Delivery" },
+            { id: 4, text: "Historial de Precios y Costos" },
+          ],
+        },
+        {
+          id: 7,
+          text: "Asistencias",
+          id: [{ id: 1, text: "Historial de Asistencias" }],
+        },
+      ],
+    },
+    {
+      id: 5,
+      text: "Facturador",
+      id: [
+        {
+          id: 1,
+          text: "FCE1",
+          id: [
+            { id: 1, text: "Historial de Pedidos" },
+            { id: 2, text: "Resumen de Comercio" },
+            { id: 3, text: "Libro IVA Ventas" },
+          ],
+        },
+        {
+          id: 2,
+          text: "FCE 2",
+          id: [
+            { id: 1, text: "Pedidos de Compra por Proveedor" },
+            { id: 2, text: "Historial de Compra" },
+            { id: 3, text: "Pedido de Compras por Item" },
+            { id: 4, text: "Libro de IVA Compras" },
+          ],
+        },
+        {
+          id: 3,
+          text: "MOTOMAMI",
+          id: [
+            { id: 1, text: "Carta de Productos" },
+            { id: 2, text: "Stock de Productos" },
+            { id: 3, text: "Movimiento de Stock de Productos" },
+            { id: 4, text: "Stock de Ingredientes" },
+            { id: 5, text: "Movimiento de Stock de Ingredientes" },
+          ],
+        },
+        {
+          id: 4,
+          text: "kikeeeeeeE",
           id: [{ id: 1, text: "Historial de Gastos" }],
         },
         {
