@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "tipo": 1,
+      "valor": "🙌🎉Bienvenidos al Post😊❤",
+      "orden": 1,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 2,
+      "tipo": 2,
+      "valor": "/pedido.png",
+      "orden": 5,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 3,
+      "tipo": 3,
+      "valor": "https://drive.google.com/file/d/1ykh0R8zEwJWVm3GCvY0u053HOMAg5S_Z/preview",
+      "orden": 2,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 4,
+      "tipo": 4,
+      "valor": "Albion Online es un mmorpg no lineal, en el que escribes tu propia historia sin limitarte a seguir un camino prefijado. Explora un amplio mundo abierto con 5 biomas únicos, todo cuánto hagas tendrá su repercusión en el mundo, con la economía orientada al jugador de Albion, los jugadores crean prácticamente todo el equipo a partir de los recursos que consiguen, el equipo que llevas define quién eres, cambia de arma y armadura para pasar de caballero a mago, o juega como una mezcla de ambas clases. Aventúrate en el mundo abierto frente a los habitantes y las criaturas de Albion, inicia expediciones o adéntrate en mazmorras en las que encontrarás enemigos aún más difíciles, enfréntate a otros jugadores en encuentros en el mundo abierto, lucha por los territorios o por ciudades enteras en batallas tácticas, relájate en tu isla privada, donde podrás construir un hogar, cultivar cosechas y criar animales, únete a un gremio, todo es mejor cuando se trabaja en grupo. Adéntrate ya en el mundo de Albion y escribe tu propia historia",
+      "orden": 3,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 5,
+      "tipo": 5,
+      "valor": "Subtitulo 1",
+      "orden": 4,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 6,
+      "tipo": 6,
+      "valor": "Subtitulo 2",
+      "orden": 6,
+      "estado": 1,
+      "post_id": 1
+    },
+    
+    {
+      "id": 7,
+      "tipo": 4,
+      "valor": "Lorem ipsum dolor sit amet. Sed rerum libero et eius Quis eum illum voluptatibus aut voluptatem quasi. Eos consequatur velit est iste sint eos tenetur quasi id pariatur sint est amet enim a veniam expedita. Aut omnis delectus ex recusandae eaque et labore iste? Hic exercitationem sequi et dolor accusamus eum provident.",
+      "orden": 9,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 8,
+      "tipo": 4,
+      "valor": "Lorem ipsum dolor sit amet. Sed rerum libero et eius Quis eum illum voluptatibus aut voluptatem quasi. Eos consequatur velit est iste sint eos tenetur quasi id pariatur sint est amet enim a veniam expedita. Aut omnis delectus ex recusandae eaque et labore iste? Hic exercitationem sequi et dolor accusamus eum provident.",
+      "orden": 8,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 9,
+      "tipo": 7,
+      "valor": "",
+      "orden": 5,
+      "estado": 1,
+      "post_id": 1
+    },
+    {
+      "id": 10,
+      "tipo": 7,
+      "valor": "",
+      "orden": 3,
+      "estado": 1,
+      "post_id": 1
+    }
+  ]

@@ -1,10 +1,12 @@
 .contenedor {
     width: 80px;
-    position: absolute;
+ 
     height: 100vh;
     background: #393939; 
     top: 0;
     bottom: 0;
+    position:fixed
+
 }
 
 .logoPrincipal{
