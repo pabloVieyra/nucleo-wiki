@@ -1,11 +1,9 @@
 import React from "react";
 import estilos from "./Post.module.css";
 
-const H3 = () => {
+const H3 = ({ values }) => {
   return (
-    <div className={`${estilos.H3} ${estilos.componentPost}`}>
-      H3 H3 H3 H3 H3
-    </div>
+    <div className={`${estilos.H3} ${estilos.componentPost}`}>{values}</div>
   );
 };
 

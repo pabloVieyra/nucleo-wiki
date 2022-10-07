@@ -10,17 +10,20 @@
     padding-left: 6%;
     padding-right: 6%;
     font-family: inter;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1378px;
 }
 
 .H1{
     justify-content: flex-start;
     color: #BDD816;
     font-weight: bold;
-    padding-left: 2%;
-    font-size: 26px;
+    font-size: 32px;
 }
 
 .H2{
+    justify-content: flex-start;
     color: #BDD816;
     font-size: 22px;
 }
@@ -32,9 +35,27 @@
 }
 
 .Ruta{
-    
+    padding: 60px;
     justify-content: flex-start;
     color: #BDD816;
     padding-left: 1%;
     font-size: 26px;
 }
+
+.iframe{
+    width: 50vw; 
+    height: 480px;
+}
+
+.container{
+    width: 100%;
+    background-color: #121212;
+}
+
+.linea {
+    border-top: 1.7px solid white;
+    height: 2px;
+    max-width: 1370px;
+    width: 90vw;
+    margin: 20px auto 0 auto;
+  }
