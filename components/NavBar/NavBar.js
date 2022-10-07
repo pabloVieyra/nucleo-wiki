@@ -566,7 +566,7 @@ const NavBar = () => {
             <ul
               className={`${estilos.menuHor} ${
                 clicked ? `${estilos.muestra}` : `${estilos.menu}`
-              }`}
+              } ${hover ? `${estilos.shadowOn}` : `${estilos.shadowOff}`}`}
             >
               {System.map((menu) => {
                 return (
@@ -574,7 +574,7 @@ const NavBar = () => {
                     <li
                       onMouseEnter={() => setHover((current) => !current)}
                       onMouseLeave={() => setHover((current) => !current)}
-                      className={`${estilos.btn} ${estilos.selected2}`}
+                      className={`${estilos.btn} ${estilos.btnCenter} ${estilos.selected2}`}
                     >
                       <a href="#" key={menu.id}>
                         {menu.text}
