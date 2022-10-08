@@ -30,7 +30,7 @@ export const getStaticProps = async (context) => {
   const res = await fetch("http://localhost:3000/api/post/" + id);
   const data = await res.json();
 
-  const res2 = await fetch("http://localhost:3000/api/components/" + "1");
+  const res2 = await fetch("http://localhost:3000/api/components/" + id);
   const data2 = await res2.json();
 
   return {
@@ -38,7 +38,29 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default function Post({ post, components }) {
+export default function Post({ post, components, categoria }) {
+  let sistema = "";
+
+  const Sistema = () => {
+    switch (post.sistema) {
+      case 1:
+        sistema = "Gastronomico";
+        break;
+      case 2:
+        sistema = "G1";
+        break;
+      case 3:
+        sistema = "Check";
+        break;
+      case 4:
+        sistema = "Fce";
+        break;
+      case 5:
+        sistema = "Col";
+        break;
+    }
+  };
+
   const filtracion = () => {
     components.sort(function (a, b) {
       if (a.orden > b.orden) {
@@ -52,13 +74,12 @@ export default function Post({ post, components }) {
   };
 
   filtracion();
-
-  console.log(post);
+  Sistema();
 
   return (
     <div className={estilos.container}>
       <div className={`${estilos.Ruta} ${estilos.componentPost}`}>
-        Gastronomico - Producto
+        {sistema}-
       </div>
       {components.map((Component) => {
         return (
