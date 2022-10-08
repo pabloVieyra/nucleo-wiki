@@ -30,14 +30,17 @@ export const getStaticProps = async (context) => {
   const res = await fetch("http://localhost:3000/api/post/" + id);
   const data = await res.json();
 
+  const res2 = await fetch("http://localhost:3000/api/components/" + "1");
+  const data2 = await res2.json();
+
   return {
-    props: { post: data },
+    props: { post: data, components: data2 },
   };
 };
 
-export default function Post({ post }) {
+export default function Post({ post, components }) {
   const filtracion = () => {
-    Componentes.sort(function (a, b) {
+    components.sort(function (a, b) {
       if (a.orden > b.orden) {
         return 1;
       }
@@ -50,25 +53,27 @@ export default function Post({ post }) {
 
   filtracion();
 
+  console.log(post);
+
   return (
     <div className={estilos.container}>
       <div className={`${estilos.Ruta} ${estilos.componentPost}`}>
         Gastronomico - Producto
       </div>
-      {Componentes.map((Component) => {
+      {components.map((Component) => {
         return (
           <>
             {(() => {
               switch (Component.tipo) {
                 case 1:
                   return <H1Post values={Component.valor} />;
-                case 2:
+                case 5:
                   return <ImagenPost values={Component.valor} />;
                 case 3:
                   return <VideoPost values={Component.valor} />;
                 case 4:
                   return <ParrafoPost values={Component.valor} />;
-                case 5:
+                case 2:
                   return <H2Post values={Component.valor} />;
                 case 6:
                   return <H3Post values={Component.valor} />;
