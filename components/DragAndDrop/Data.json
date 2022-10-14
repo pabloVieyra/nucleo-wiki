@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Components",
+    "items": [
+      {
+        "id": 1,
+        "priority": 0,
+        "title": "Company website redesign.",
+        "chat": 1,
+        "attachment": 2,
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/75.jpg"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "priority": 2,
+        "title": "Mobile app login process prototype.",
+        "chat": 10,
+        "attachment": 4,
+        "assignees": [
+          {
+            "avt": "https://randomuser.me/api/portraits/men/67.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]

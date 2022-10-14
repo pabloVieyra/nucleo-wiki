@@ -22,7 +22,7 @@ model componentes {
   valor   String  @db.LongText
   orden   Int
   estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-  post_id Int     @default(1)
+  post_id Int
 }
 
 model favoritos {
@@ -33,7 +33,7 @@ model favoritos {
 
 model post {
   id           Int     @id @default(autoincrement())
-  nombre       String  @db.VarChar(250)
+  nombre       String  @unique(map: "nombre") @db.VarChar(250)
   categoria_id Int
   sistema      Int
   visitas      Int
@@ -51,52 +51,13 @@ model usuarios {
   estado   Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
 }
 
-model vt_PURGE_4976e2f31a6554278de82c7eec3f7a42_20220909034805 {
-  id     Int     @id @default(autoincrement())
-  tipo   Int
-  valor  String  @db.LongText
-  orden  Int
-  estado Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_vt_PURGE_4976e2f31a6554278de82c7eec3f7a42_20220909034805")
-}
-
-model vt_PURGE_adaef0b546f1525cb0667e178bd52f74_20220909034805 {
-  id           Int     @id @default(autoincrement())
-  post_id      Int?
-  categoria_id Int?
-  estado       Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-
-  @@map("_vt_PURGE_adaef0b546f1525cb0667e178bd52f74_20220909034805")
-}
-
-model vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033805 {
+model ae798328_c8a0_5460_a63a_4f8a108a1b51_20221008163948_vrepl {
   id      Int     @id @default(autoincrement())
   tipo    Int
   valor   String  @db.LongText
   orden   Int
   estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-  post_id Int
+  post_id Int     @default(1)
 
-  @@map("_vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033805")
-}
-
-model vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033806 {
-  id      Int     @id @default(autoincrement())
-  tipo    Int
-  valor   String  @db.LongText
-  orden   Int
-  estado  Boolean @default(dbgenerated("b'1'")) @db.Bit(1)
-  post_id Int
-
-  @@map("_vt_PURGE_fde2c888f9265179b26d926838b7f6e3_20220909033806")
-}
-
-model fe726b8_eec0_5880_88d1_a12bca993cff_20220909035846_vrepl {
-  id      Int    @id @default(autoincrement())
-  nombre  String @db.VarChar(250)
-  sistema Int
-  estado  Int    @default(1)
-
-  @@map("_2fe726b8_eec0_5880_88d1_a12bca993cff_20220909035846_vrepl")
+  @@map("_ae798328_c8a0_5460_a63a_4f8a108a1b51_20221008163948_vrepl")
 }
