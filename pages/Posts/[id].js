@@ -9,36 +9,21 @@ import Componentes from "../../components/Post/Utilities/Components";
 import estilos from "../../components/Post/Post.module.css";
 import AppLayout from "../../components/AppLayout/AppLayout";
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/Post");
+export async function getServerSideProps(context) {
+  const id = context.query;
+
+  const res = await fetch(`http://localhost:3000/api/post/${id.id}`);
   const data = await res.json();
 
-  const paths = data.map((post) => {
-    return {
-      params: { id: post.id.toString() },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const res = await fetch("http://localhost:3000/api/post/" + id);
-  const data = await res.json();
-
-  const res2 = await fetch("http://localhost:3000/api/components/" + id);
+  const res2 = await fetch(`http://localhost:3000/api/components/${id.id}`);
   const data2 = await res2.json();
 
   return {
     props: { post: data, components: data2 },
   };
-};
+}
 
-export default function Post({ post, components, categoria }) {
+export default function Post({ post, components }) {
   let sistema = "";
 
   const Sistema = () => {
