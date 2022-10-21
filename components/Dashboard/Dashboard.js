@@ -13,16 +13,12 @@ const Dashboard = ({ children }) => {
     <div>
       {/* SIDEBAR */}
       <div className={estilos.contenedor}>
+        {/* Logo Superior */}
+        <div className={estilos.logoPrincipal}>
+          <Image src={logocol} alt="logocol"></Image>
+        </div>
+        {/* Lista de iconos */}
         <ul className={estilos.listaIconos}>
-          {/* Logo Superior */}
-          <div className={estilos.logoPrincipal}>
-            <li className={estilos.logoNucleo}>
-              <div className={estilos.logo1}>
-                <Image src={logocol} alt="logocol"></Image>
-              </div>
-            </li>
-          </div>
-          {/* Lista de iconos */}
           <li>
             <a className={estilos.icono} href="#">
               <Image src={logong} alt="logong"></Image>
@@ -38,6 +34,12 @@ const Dashboard = ({ children }) => {
               <Image src={logocheck} alt="logocheck"></Image>
             </a>
           </li>
+
+          <li>
+            <a className={estilos.icono} href="#">
+              <Image src={logocol} alt="logofce"></Image>
+            </a>
+          </li>
           <li>
             <a className={estilos.icono} href="#">
               <Image src={logofce} alt="logofce"></Image>
@@ -45,19 +47,9 @@ const Dashboard = ({ children }) => {
           </li>
           {/* Fin Lista Iconos */}
         </ul>
-        <ul>
-          <div className={estilos.logoNucleo2}>
-            <li>
-              <div className={estilos.logoPerfil}>
-                <Image
-                  className={estilos.imgPerfil}
-                  src={logousuario}
-                  alt="logousuario"
-                ></Image>
-              </div>
-            </li>
-          </div>
-        </ul>
+        <div className={estilos.logoPerfil}>
+          <Image src={logousuario} alt="logousuario"></Image>
+        </div>
       </div>
       {children}
     </div> /* FIN SIDEBAR */

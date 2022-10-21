@@ -1,28 +1,21 @@
 .contenedor {
     width: 80px;
- 
     height: 100vh;
     background: #393939; 
     top: 0;
     bottom: 0;
-    position:fixed
-
-}
-
-.logoPrincipal{
-    padding-bottom: 100px;
-}
-
-.iconos {
-    position: relative;
-    list-style-type: none;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icono {
     display: flex;
     align-items: center;
-    padding: 20px 20px;
-    /* height: 40px; */
+    padding: 10px;
+    justify-content: center;
     transition: .3s ease;
     border-radius: 10px 10px;
     text-decoration: none;
@@ -32,17 +25,12 @@
     background: rgba(150, 150, 150, 0.35);
 }
 
-.logoNucleo2 {
-    align-items: flex-end;
-    padding-top: 250px;
+.logoPerfil {
     display: flex;
     align-items: center;
-}
-.imgPerfil {
-    display: flex;
-    align-items: center;
-    height: 20px;
     width: 60px;
     height: 60px;
+    padding: 10px;
     color: white;
+    justify-content: center;
 }
