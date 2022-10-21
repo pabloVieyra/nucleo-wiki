@@ -4,6 +4,7 @@ import logoNg from "../../public/Images/ng.png";
 import logoG1 from "../../public/Images/g1.png";
 import logoCheck from "../../public/Images/check.png";
 import logoCol from "../../public/Images/col.png";
+import logoFce from "../../public/Images/fce.png";
 import Image from "next/image";
 
 const HomePage = () => {
@@ -66,7 +67,22 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+
+          <div className={style.iconContainer}>
+            <div className={style.iconContainerInner}>
+              <div className={style.iconFront}>
+                <div className={style.imgIcon}>
+                  <Image src={logoFce} alt="col"></Image>
+                </div>
+              </div>
+
+              <div className={style.iconBack}>
+                <h1 className={style.iconText}>Facturador Electronico</h1>
+              </div>
+            </div>
+          </div>
         </div>
+        <div className={style.landing}></div>
       </div>
     </>
   );
