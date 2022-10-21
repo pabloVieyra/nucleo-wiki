@@ -97,17 +97,17 @@ const PostPrueba = () => {
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              htmlFor="Categorias_Id"
+              htmlFor="Categorias_id"
             >
-              Categorias_Id
+              Categorias_id
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="Categorias_Id"
+              id="Categorias_id"
               type="number"
               placeholder="Jane"
               onChange={formik.handleChange}
-              value={formik.values.Categorias_Id}
+              value={formik.values.Categorias_id}
             />
           </div>
         </div>

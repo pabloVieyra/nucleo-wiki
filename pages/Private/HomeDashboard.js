@@ -1,6 +1,6 @@
 import React from "react";
-import AppLayoutPrivate from "../../components/AppLayout/AppLayoutPrivate";
 import Homedash from "/components/Homedash/Homedash";
+import AppLayoutPrivate from "../../components/AppLayout/AppLayoutPrivate";
 
 const HomeDashboard = () => {
   return (

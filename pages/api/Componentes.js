@@ -25,6 +25,7 @@ async function createComponentes(req, res) {
         valor: body.valor,
         orden: body.orden,
         estado: body.estado,
+        post_id: body.post_id,
       },
     });
     return res.status(200).json(newEntry, { success: true });

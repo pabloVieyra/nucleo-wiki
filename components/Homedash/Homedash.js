@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
-
+import AgregarComponente from "../Popup/AgregarComponente";
+import Categoria from "../../components/Categoria/Categoria";
 import CardHome from "../CardHome/CardHome";
-import CardNewPost from "../CardHome/CardNewPost";
 import image from "../../public/Images/ng.png";
+import AbmCategoria from "../Popup/AbmCategoria";
+import Link from "next/link";
 
 const Homedash = () => {
   const [posts, setPosts] = useState([]);
+
+  const [modalOn, setModalOn] = useState(false);
+  const [choice, setChoice] = useState(false);
+
+  const clicked = () => {
+    setModalOn(true);
+  };
 
   const GetPost = () => {
     axios
@@ -101,24 +110,26 @@ const Homedash = () => {
 
         <div className="flex-col-reverse mt-10  ml-40 mr-10    ">
           <div className="flex justify-end  ">
-            <input type="checkbox" id="choose-me" className="peer hidden" />
-            <label
-              htmlFor="choose-me"
-              className="select-none cursor-pointer rounded-lg border-2 border-gray-200
+            <Link href="/Private/PostComponent">
+              <button
+                htmlFor="choose-me"
+                className="select-none cursor-pointer rounded-lg border-2 border-gray-200
             py-2 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out peer-checked:bg-gray-200 peer-checked:text-gray-900 peer-checked:border-gray-200 "
-            >
-              Crear Post
-            </label>
+              >
+                Crear Post
+              </button>
+            </Link>
           </div>
+
           <div className="flex justify-end mt-4 ">
-            <input type="checkbox" id="choose-me" className="peer hidden" />
-            <label
+            <button
               htmlFor="choose-me"
               className="select-none cursor-pointer rounded-lg border-2 border-gray-200
              py-2  px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out peer-checked:bg-gray-200 peer-checked:text-gray-900 peer-checked:border-gray-200 "
+              onClick={clicked}
             >
               Crear Categoria
-            </label>
+            </button>
           </div>
         </div>
       </div>
@@ -132,6 +143,22 @@ const Homedash = () => {
             );
           })}
         </div>
+        {/* ---> Modales */}
+        {modalOn && (
+          <AbmCategoria
+            setModalOn={setModalOn}
+            setChoice={setChoice}
+          ></AbmCategoria>
+        )}
+
+        {choice && (
+          <div className="flex justify-center">
+            <div className="flex  justify-center w-1/3 bg-red-400 m-4 p-6 text-lg text-white ">
+              {" "}
+              Felicidades
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
