@@ -4,6 +4,7 @@ import Image from "next/dist/client/image";
 import { Draggable } from "react-beautiful-dnd";
 
 function CardItem({ data, index }) {
+  console.log(data);
   return (
     <Draggable index={index} draggableId={data.id.toString()}>
       {(provided) => (

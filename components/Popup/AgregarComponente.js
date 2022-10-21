@@ -1,8 +1,16 @@
 import React from "react";
 
-const AgregarComponente = () => {
+const AgregarComponente = ({ setModalOn, setChoice }) => {
+  const handleOKClick = () => {
+    setChoice(true);
+    setModalOn(false);
+  };
+  const handleCancelClick = () => {
+    setChoice(false);
+    setModalOn(false);
+  };
   return (
-    <div>
+    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm ">
       <div className="flex justify-center items-center">
         <div className="md:w-1/3 sm:w-full rounded-lg shadow-lg bg-green-500 my-3">
           <div className="flex justify-end p-2">
@@ -19,7 +27,11 @@ const AgregarComponente = () => {
             </svg>
           </div>
           <div className="flex justify-between px-5 py-4">
-            <select name="lstAsunto" id="lstAsunto" className="bg-teal p-3 rounded text-black shadow-inner w-7/12">
+            <select
+              name="lstAsunto"
+              id="lstAsunto"
+              className="bg-teal p-3 rounded text-black shadow-inner w-7/12"
+            >
               <option value="" disabled selected>
                 Seleccionar
               </option>
@@ -38,12 +50,18 @@ const AgregarComponente = () => {
             </div>
             <div className="flex flex-col row-span-2 pr-4">
               <div className="flex justify-end">
-                <button className="	bg-white mr-1 m-3 w-20 rounded text-sm py-2 px-3 text-black transition duration-150">
+                <button
+                  onClick={handleOKClick}
+                  className="	bg-white mr-1 m-3 w-20 rounded text-sm py-2 px-3 text-black transition duration-150"
+                >
                   Guardar
                 </button>
               </div>
               <div className="flex justify-end">
-                <button className="	bg-white mr-1 m-3 w-20 rounded text-sm py-2 px-3 text-black transition duration-150">
+                <button
+                  onClick={handleCancelClick}
+                  className="	bg-white mr-1 m-3 w-20 rounded text-sm py-2 px-3 text-black transition duration-150"
+                >
                   Cancelar
                 </button>
               </div>

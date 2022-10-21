@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Image from "next/dist/client/image";
 import CardItem from "../DragAndDrop/CardItem";
 import BoardData from "../DragAndDrop/Data.json";
