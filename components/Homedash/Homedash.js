@@ -11,6 +11,7 @@ import logong from "../../public/Images/ng.png";
 import logog1 from "../../public/Images/g1.png";
 import logocheck from "../../public/Images/check.png";
 import logofce from "../../public/Images/fce.png";
+import sistemas from "../../utilities/Systems.json";
 
 const Homedash = ({ system }) => {
   const [posts, setPosts] = useState([]);
@@ -20,6 +21,15 @@ const Homedash = ({ system }) => {
 
   const clicked = () => {
     setModalOn(true);
+  };
+
+  const PostDestruct = () => {
+    sistemas.map((sistema) => {
+      if (sistema.sistema === system) {
+        console.log(sistema.sistema);
+        console.log(system);
+      }
+    });
   };
 
   const GetPost = () => {
@@ -36,6 +46,8 @@ const Homedash = ({ system }) => {
 
   useEffect(() => {
     GetPost();
+    PostDestruct();
+    console.log(sistemas);
   }, []);
 
   return (
