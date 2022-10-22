@@ -1,0 +1,27 @@
+[
+  {
+    "Sid": 1,
+    "sistema": "Gastronomico",
+    "id": []
+  },
+  {
+    "Sid": 2,
+    "sistema": "Check",
+    "id": []
+  },
+  {
+    "Sid": 3,
+    "sistema": "G1",
+    "id": []
+  },
+  {
+    "Sid": 4,
+    "sistema": "Control Online",
+    "id": []
+  },
+  {
+    "Sid": 5,
+    "sistema": "Facturador",
+    "id": []
+  }
+]
