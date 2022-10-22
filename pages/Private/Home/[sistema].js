@@ -1,11 +1,15 @@
 import React from "react";
 import Homedash from "/components/Homedash/Homedash";
 import AppLayoutPrivate from "../../../components/AppLayout/AppLayoutPrivate";
+import { useRouter } from "next/router";
 
 const Home = () => {
+  const router = useRouter();
+  const { sistema } = router.query;
+
   return (
     <div className="bg-gray-900 ">
-      <Homedash></Homedash>
+      <Homedash system={sistema}></Homedash>
     </div>
   );
 };

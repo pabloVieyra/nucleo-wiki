@@ -4,11 +4,15 @@ import Image from "next/image";
 import AgregarComponente from "../Popup/AgregarComponente";
 import Categoria from "../../components/Categoria/Categoria";
 import CardHome from "../CardHome/CardHome";
-import image from "../../public/Images/ng.png";
 import AbmCategoria from "../Popup/AbmCategoria";
 import Link from "next/link";
+import logocol from "../../public/Images/col.png";
+import logong from "../../public/Images/ng.png";
+import logog1 from "../../public/Images/g1.png";
+import logocheck from "../../public/Images/check.png";
+import logofce from "../../public/Images/fce.png";
 
-const Homedash = () => {
+const Homedash = ({ system }) => {
   const [posts, setPosts] = useState([]);
 
   const [modalOn, setModalOn] = useState(false);
@@ -36,9 +40,43 @@ const Homedash = () => {
 
   return (
     <>
-      <div className=" flex justify-center">
-        <Image src={image} alt="Puto" width={150} height={150} />
-      </div>
+      {(() => {
+        switch (system) {
+          case "NG":
+            return (
+              <div className=" flex justify-center">
+                <Image src={logong} alt="Ng" width={150} height={150} />
+              </div>
+            );
+          case "G1":
+            return (
+              <div className=" flex justify-center">
+                <Image src={logog1} alt="G1" width={150} height={150} />
+              </div>
+            );
+          case "CHECK":
+            return (
+              <div className=" flex justify-center">
+                <Image src={logocheck} alt="CHECK" width={150} height={150} />
+              </div>
+            );
+          case "COL":
+            return (
+              <div className=" flex justify-center">
+                <Image src={logocol} alt="COL" width={150} height={150} />
+              </div>
+            );
+          case "FCE":
+            return (
+              <div className=" flex justify-center">
+                <Image src={logofce} alt="FCE" width={150} height={150} />
+              </div>
+            );
+          default:
+            return null;
+        }
+      })()}
+
       <div className="flex justify-between">
         <div className="w-60 mt-10  ml-40 flex flex-col   ">
           <h1 className="text-white"> Categorias</h1>
