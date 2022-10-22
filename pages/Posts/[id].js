@@ -73,13 +73,13 @@ export default function Post({ post, components }) {
               switch (Component.tipo) {
                 case 1:
                   return <H1Post values={Component.valor} />;
-                case 5:
+                case 2:
                   return <ImagenPost values={Component.valor} />;
                 case 3:
                   return <VideoPost values={Component.valor} />;
                 case 4:
                   return <ParrafoPost values={Component.valor} />;
-                case 2:
+                case 5:
                   return <H2Post values={Component.valor} />;
                 case 6:
                   return <H3Post values={Component.valor} />;
