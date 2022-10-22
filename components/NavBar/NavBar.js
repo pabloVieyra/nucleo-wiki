@@ -151,9 +151,7 @@ const NavBar = () => {
                               <li
                                 className={`${estilos.btn} ${estilos.selected3}`}
                               >
-                                <a href="#" key={submenu.id}>
-                                  {submenu.nombre}
-                                </a>
+                                <a key={submenu.id}>{submenu.nombre}</a>
                                 <ul
                                   className={`${estilos.subMenu} ${estilos.menuVer} ${estilos.menu3}`}
                                 >
@@ -161,9 +159,12 @@ const NavBar = () => {
                                     return (
                                       <>
                                         <li className={`${estilos.btn}`}>
-                                          <a href="#" key={submenusub.id}>
+                                          <Link
+                                            href={`/Posts/${submenusub.id}`}
+                                            key={submenusub.id}
+                                          >
                                             {submenusub.nombre}
-                                          </a>
+                                          </Link>
                                         </li>
                                       </>
                                     );
