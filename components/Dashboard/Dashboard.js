@@ -1,7 +1,6 @@
 import React from "react";
 import estilos from "./Dashboard.module.css";
 import Image from "next/image";
-import logoWiki from "../../public/Images/WIKI NUCLEO/Wiki 2 64px.png";
 import logocol from "../../public/Images/col.png";
 import logong from "../../public/Images/ng.png";
 import logog1 from "../../public/Images/g1.png";
@@ -17,7 +16,7 @@ const Dashboard = ({ children }) => {
       <div className={estilos.contenedor}>
         {/* Logo Superior */}
         <div className={estilos.logoPrincipal}>
-          <Image src={logoWiki} alt="logoWiki"></Image>
+          <Image src={logocol} alt="logoWiki"></Image>
         </div>
         {/* Lista de iconos */}
         <ul className={estilos.listaIconos}>
