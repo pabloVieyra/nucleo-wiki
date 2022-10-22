@@ -82,7 +82,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className={style.landing}></div>
+        {/* <div className={style.landing}></div> */}
       </div>
     </>
   );
