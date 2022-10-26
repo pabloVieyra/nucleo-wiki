@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider             = "mysql"
-  url                  = "mysql://kio8ddld1trk730e18gs:pscale_pw_vTUyfynL1wK4H0AbaBJLhQfBhsU2ggHQzg6GS23SvJe@aws-sa-east-1.connect.psdb.cloud/wikinucleo?sslaccept=strict"
+  url                  = env("DATABASE_URL")
   referentialIntegrity = "prisma"
 }
 
