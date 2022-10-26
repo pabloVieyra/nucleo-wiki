@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
-import AgregarComponente from "../Popup/AgregarComponente";
-import Categoria from "../../components/Categoria/Categoria";
 import CardHome from "../CardHome/CardHome";
 import AbmCategoria from "../Popup/AbmCategoria";
 import Link from "next/link";
+import { getPostPorSistema } from "../../services/PostService";
 import logocol from "../../public/Images/col.png";
 import logong from "../../public/Images/ng.png";
 import logog1 from "../../public/Images/g1.png";
@@ -14,29 +13,42 @@ import logofce from "../../public/Images/fce.png";
 
 const Homedash = ({ system }) => {
   const [posts, setPosts] = useState([]);
-
+  const [categorias, setCategorias] = useState([]);
   const [modalOn, setModalOn] = useState(false);
   const [choice, setChoice] = useState(false);
+  const [id, setId] = useState(0);
 
   const clicked = () => {
     setModalOn(true);
   };
 
-  const GetPost = () => {
-    axios
-      .get("http://localhost:3000/api/Post")
-      .then((response) => {
-        console.log(response.data);
-        setPosts(response.data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+  const getPostPorSystem = async (id) => {
+    const resp = await getPostPorSistema(id);
+
+    return resp;
   };
 
   useEffect(() => {
-    GetPost();
-  }, []);
+    if (system === "NG") {
+      setId(1);
+    }
+    if (system === "G1") {
+      setId(2);
+    }
+    if (system === "CHECK") {
+      setId(3);
+    }
+    if (system === "COL") {
+      setId(4);
+    }
+    if (system === "FCE") {
+      setId(5);
+    }
+
+    getPostPorSystem(id).then((res) => {
+      setPosts(res);
+    });
+  }, [system, id]);
 
   return (
     <>
@@ -148,7 +160,7 @@ const Homedash = ({ system }) => {
 
         <div className="flex-col-reverse mt-10  ml-40 mr-10    ">
           <div className="flex justify-end  ">
-            <Link href="/Private/PostComponent">
+            <Link href="/Private/Posts/NewPost">
               <button
                 htmlFor="choose-me"
                 className="select-none cursor-pointer rounded-lg border-2 border-gray-200
@@ -174,9 +186,10 @@ const Homedash = ({ system }) => {
       <div className="ml-20 md:ml-10 xl:ml-20  ">
         <div className=" flex justify-center grid grid-cols-3 gap-4  md:grid-cols-3 md:ml-10 xl:grid-cols-4 xl:ml-10  ">
           {posts.map((post) => {
+            console.log(post.id);
             return (
               <>
-                <CardHome nombre={post.nombre}></CardHome>
+                <CardHome nombre={post.nombre} id={post.id}></CardHome>
               </>
             );
           })}
