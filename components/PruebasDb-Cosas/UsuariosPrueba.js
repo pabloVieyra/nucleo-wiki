@@ -21,7 +21,7 @@ const UsuariosPrueba = () => {
 
   const PostUsuario = (values) => {
     axios
-      .post("http://localhost:3000/api/Usuarios", {
+      .post("/api/Usuarios", {
         nombre: values.Nombre,
         apellido: values.Apellido,
         email: values.Email,
@@ -40,7 +40,7 @@ const UsuariosPrueba = () => {
 
   const GetUsuarios = () => {
     axios
-      .get("http://localhost:3000/api/Usuarios")
+      .get("/api/Usuarios")
       .then((response) => {
         console.log(response.data);
         setUsuarios(response.data);

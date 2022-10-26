@@ -18,7 +18,7 @@ const FavoritosPrueba = () => {
 
   const PostFavoritos = (values) => {
     axios
-      .post("http://localhost:3000/api/Favoritos", {
+      .post("/api/Favoritos", {
         post_id: values.Post_Id,
         usuario_id: values.User_Id,
       })
@@ -34,7 +34,7 @@ const FavoritosPrueba = () => {
 
   const GetFavoritos = () => {
     axios
-      .get("http://localhost:3000/api/Favoritos")
+      .get("/api/Favoritos")
       .then((response) => {
         console.log(response.data);
         setFavoritos(response.data);

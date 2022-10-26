@@ -19,7 +19,7 @@ const ComponentsPrueba = () => {
 
   const PostComponent = (values) => {
     axios
-      .post("http://localhost:3000/api/Componentes", {
+      .post("/api/Componentes", {
         tipo: values.Tipo,
         valor: values.Valor,
         orden: values.Orden,
@@ -37,7 +37,7 @@ const ComponentsPrueba = () => {
 
   const GetComponent = () => {
     axios
-      .get("http://localhost:3000/api/Componentes")
+      .get("/api/Componentes")
       .then((response) => {
         console.log(response.data);
         setComponents(response.data);

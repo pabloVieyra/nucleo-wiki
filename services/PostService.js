@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const Post_URL = "http://localhost:3000/api/post/porCategoria";
-export const Post_URLS = "http://localhost:3000/api/post/porSistema";
+export const Post_URL = "/api/post/porCategoria";
+export const Post_URLS = "/api/post/porSistema";
 
 const getPostPorCategoria = async (categoriaId) => {
   try {
