@@ -36,7 +36,7 @@ const CategoriaPrueba = () => {
 
   const PostCategoria = (values) => {
     axios
-      .post("http://localhost:3000/api/Categorias", {
+      .post("/api/Categorias", {
         nombre: values.Nombre,
         sistema: values.Sistema,
       })
@@ -52,7 +52,7 @@ const CategoriaPrueba = () => {
 
   const GetCategoria = () => {
     axios
-      .get("http://localhost:3000/api/Categorias")
+      .get("/api/Categorias")
       .then((response) => {
         console.log(response.data);
         setCategorias(response.data);

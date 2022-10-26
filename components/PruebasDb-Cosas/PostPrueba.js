@@ -39,7 +39,7 @@ const PostPrueba = () => {
 
   const PostDelPost = (values) => {
     axios
-      .post("http://localhost:3000/api/Post", {
+      .post("/api/Post", {
         nombre: values.Nombre,
         categoria_id: values.Categorias_id,
         sistema: values.Sistema,
@@ -58,7 +58,7 @@ const PostPrueba = () => {
 
   const GetPost = () => {
     axios
-      .get("http://localhost:3000/api/Post")
+      .get("/api/Post")
       .then((response) => {
         console.log(response.data);
         setPosts(response.data);

@@ -15,7 +15,7 @@ const NavBar = () => {
 
   const GetCategoria = () => {
     axios
-      .get("http://localhost:3000/api/Categorias")
+      .get("/api/Categorias")
       .then((response) => {
         setCategorias(response.data);
       })
