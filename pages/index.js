@@ -11,6 +11,10 @@ export default function Home() {
         <title>Nucleo Wiki</title>
         <meta name="description" content="Nucle Wiki by Nucleo" />
         <link rel="icon" href="../public/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <HomePage></HomePage>
     </>

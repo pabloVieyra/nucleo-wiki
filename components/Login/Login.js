@@ -31,7 +31,7 @@ const Login = () => {
   });
 
   return (
-    <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-black text-white">
+    <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-secundary text-white">
       <div className="h-screen w-1/2 bg-black">
         <div className="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
           <div>
