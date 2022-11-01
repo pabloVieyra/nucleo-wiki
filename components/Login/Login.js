@@ -35,8 +35,8 @@ const Login = () => {
       <div className="h-screen w-1/2 bg-black">
         <div className="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
           <div>
-            <h2 className="text-gray-800 font-bold text-5xl pb-0 text-center">
-              Núcleo<span className="text-green-600">Wiki</span>
+            <h2 className="text-white font-bold text-5xl pb-0 text-center">
+              Núcleo<span className="text-white">Wiki</span>
             </h2>
             <div className="grid place-items-center ">
               <Link href="/Private/HomeDashboard">
@@ -45,7 +45,7 @@ const Login = () => {
             </div>
           </div>
           <div>
-            <fieldset className="border-t mt-10 border-solid border-gray-600">
+            <fieldset className="border-t mt-10 border-solid border-white">
               <legend className="mx-auto px-2 text-center text-m">
                 inicie sesión
               </legend>

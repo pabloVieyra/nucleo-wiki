@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="bg-secundary h-1/2 w-full flex md:flex-row flex-col justify-around items-start">
           <div className="p-5 ">
             <ul>
-              <h2 className="text-gray-800 font-bold text-3xl pb-6">
-                Núcleo<span className="text-green-600">Wiki</span>
+              <h2 className="text-white font-bold text-3xl pb-6">
+                Núcleo<span className="text-white">Wiki</span>
               </h2>
               <div className="flex gap-6 pb-5 grid place-items-center">
                 <Image src={logowiki} alt="check"></Image>
@@ -18,8 +18,8 @@ const Footer = () => {
             </ul>
           </div>
           <div className="p-5">
-            <h2 className="text-gray-800 font-bold text-3xl pb-6">Nosotros</h2>
-            <p className="text-gray-500 text-md pb-2 font-semibold">
+            <h2 className="text-white font-bold text-3xl pb-6">Nosotros</h2>
+            <p className="font-poppins text-white text-md pb-2 font-regular">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -32,7 +32,7 @@ const Footer = () => {
 
           <div className="p-5 ">
             <ul>
-              <h2 className="text-gray-800 font-bold text-3xl pb-6">
+              <h2 className="text-white font-bold text-3xl pb-6">
                 Seguinos en...
               </h2>
               <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">

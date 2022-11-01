@@ -14,15 +14,13 @@ module.exports = {
     colors: {
       primary: "#87B847",
       secundary: "#1C1C1C",
-      white: "#fffff",
+      white: "#ffffff",
       cardDark: "2F2F30",
       inputDark: "404041",
       blueTopo: "64748B",
     },
     fontFamily: {
-      sans: ["Noto Sans", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
     },
   },
-  plugins: [],
 };
