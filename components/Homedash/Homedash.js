@@ -142,7 +142,7 @@ const Homedash = ({ system }) => {
           {/* Aca termina la busqueda */}
           <label
             htmlFor="countries"
-            className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400"
+            className="block mb-1 text-sm font-medium text-white dark:text-gray-400"
           >
             Select an option
           </label>
@@ -163,8 +163,8 @@ const Homedash = ({ system }) => {
             <Link href="/Private/Posts/NewPost">
               <button
                 htmlFor="choose-me"
-                className="select-none cursor-pointer rounded-lg border-2 border-gray-200
-            py-2 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out peer-checked:bg-gray-200 peer-checked:text-gray-900 peer-checked:border-gray-200 "
+                className="select-none cursor-pointer rounded-lg border-2 border-primary
+            py-2 px-6 font-bold text-primary transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-checked:text-primary peer-checked:border-primary "
               >
                 Crear Post
               </button>
@@ -174,8 +174,8 @@ const Homedash = ({ system }) => {
           <div className="flex justify-end mt-4 ">
             <button
               htmlFor="choose-me"
-              className="select-none cursor-pointer rounded-lg border-2 border-gray-200
-             py-2  px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out peer-checked:bg-gray-200 peer-checked:text-gray-900 peer-checked:border-gray-200 "
+              className="select-none cursor-pointer rounded-lg border-2 border-primary
+             py-2  px-6 font-bold text-primary transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-checked:text-primary peer-checked:border-primary "
               onClick={clicked}
             >
               Crear Categoria

@@ -3,7 +3,7 @@ import Homedash from "/components/Homedash/Homedash";
 import AppLayoutPrivate from "../../components/AppLayout/AppLayoutPrivate";
 
 const HomeDashboard = () => {
-  return <div className="bg-gray-900 "></div>;
+  return <div className="w-full  bg-secundary "></div>;
 };
 
 HomeDashboard.getLayout = function getLayout(page) {

@@ -13,7 +13,7 @@ const AbmCategoria = ({ setModalOn, setChoice }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm ">
       <div className="flex justify-center items-center">
-        <div className="md:w-1/3 sm:w-full rounded-lg shadow-lg bg-green-500 my-3">
+        <div className="md:w-1/3 sm:w-full rounded-lg shadow-lg bg-primary my-3">
           <div className="flex justify-end p-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,20 +34,20 @@ const AbmCategoria = ({ setModalOn, setChoice }) => {
               className="bg-teal p-3 rounded text-black shadow-inner w-7/12"
             >
               <option value="" disabled selected>
-                Seleccionar
+                Seleccionar Sistema
               </option>
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
+              <option value="">Ng</option>
+              <option value="">G1</option>
+              <option value="">Fce</option>
+              <option value="">Col</option>
+              <option value="">Check</option>
             </select>
           </div>
 
           <div className="grid  grid-flow-col ">
             <div className="col-span-2 px-5 pt-1 flex flex-col mb-3">
-              <textarea
-                rows="10"
-                className="rounded-lg text-sm bg-white border focus:border-white-500"
-              ></textarea>
+              <label>Nombre de la categoria</label>
+              <input></input>
             </div>
             <div className="flex flex-col row-span-2 pr-4">
               <div className="flex justify-end">
