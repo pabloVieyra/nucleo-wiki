@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    background-color: #121212;
+    background-color: #1C1C1C;
     color: white;
     padding: 1%;
     padding-left: 6%;
@@ -17,27 +17,27 @@
 
 .H1{
     justify-content: flex-start;
-    color: #BDD816;
+    color: #87B847;
     font-weight: bold;
     font-size: 32px;
 }
 
 .H2{
     justify-content: flex-start;
-    color: #BDD816;
+    color: white;
     font-size: 22px;
 }
 
 .H3{
     justify-content: flex-start;
-    color: #BDD816; 
+    color: white; 
     font-size: 18px;
 }
 
 .Ruta{
     padding: 60px;
     justify-content: flex-start;
-    color: #BDD816;
+    color: #87B847;
     padding-left: 1%;
     font-size: 26px;
 }
@@ -49,7 +49,7 @@
 
 .container{
     width: 100%;
-    background-color: #121212;
+    background-color: #1C1C1C;
 }
 
 .linea {

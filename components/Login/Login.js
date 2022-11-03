@@ -31,12 +31,12 @@ const Login = () => {
   });
 
   return (
-    <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-black text-white">
+    <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-secundary text-white">
       <div className="h-screen w-1/2 bg-black">
         <div className="mx-auto flex h-full w-2/3 flex-col justify-center text-white xl:w-1/2">
           <div>
-            <h2 className="text-gray-800 font-bold text-5xl pb-0 text-center">
-              Núcleo<span className="text-green-600">Wiki</span>
+            <h2 className="mb-8 text-white font-bold text-5xl pb-0 text-center">
+              Login
             </h2>
             <div className="grid place-items-center ">
               <Link href="/Private/HomeDashboard">
@@ -45,9 +45,9 @@ const Login = () => {
             </div>
           </div>
           <div>
-            <fieldset className="border-t mt-10 border-solid border-gray-600">
+            <fieldset className=" border-t mt-10 border-solid border-white">
               <legend className="mx-auto px-2 text-center text-m">
-                inicie sesión
+                Inicie Sesión
               </legend>
             </fieldset>
           </div>
@@ -55,7 +55,7 @@ const Login = () => {
             <form onSubmit={formik.handleSubmit}>
               <div>
                 <input
-                  className="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+                  className="w-full transform border-b-2 bg-secundary text-lg text-white duration-300 focus-within:border-indigo-500 "
                   type="name"
                   id="name"
                   name="name"
@@ -71,11 +71,11 @@ const Login = () => {
               </div>
               <div className="mt-10">
                 <input
-                  className="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+                  className="w-full transform border-b-2 bg-secundary text-lg  duration-300 focus-within:border-indigo-500 "
                   type="password"
                   id="password"
                   name="password"
-                  placeholder="contraseña"
+                  placeholder="Contraseña"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.password}
@@ -93,7 +93,7 @@ const Login = () => {
               </div>
               <div className="my-10">
                 <button
-                  className="w-full rounded-full bg-green-600 p-2 hover:bg-gray-800 font-bold"
+                  className="w-full rounded-lg bg-primary p-2 hover:bg-gray-800 font-bold"
                   type="button"
                   onClick={() => validateField("name, password")}
                 >

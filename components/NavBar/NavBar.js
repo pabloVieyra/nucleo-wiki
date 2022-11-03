@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import estilos from "./NavBar.module.css";
-import logo from "../../public/Images/logo.png";
+import logo from "../../public/Images/logowiki.png";
 import perfil from "../../public/Images/perfil.png";
 import Image from "next/image";
 import Link from "next/link";

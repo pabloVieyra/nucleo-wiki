@@ -6,39 +6,33 @@ const Footer = () => {
   return (
     <>
       <div className="z-50">
-        <div className="bg-black h-1/2 w-full flex md:flex-row flex-col justify-around items-start">
+        <div className="bg-secundary h-1/2 w-full flex md:flex-row flex-col justify-around items-start">
           <div className="p-5 ">
             <ul>
-              <h2 className="text-gray-800 font-bold text-3xl pb-6">
-                Núcleo<span className="text-green-600">Wiki</span>
+              <h2 className="text-primary font-bold text-3xl pb-6">
+                Núcleo<span className="text-primary">Wiki</span>
               </h2>
-              <div className="flex gap-6 pb-5 grid place-items-center">
-                <Image src={logowiki} alt="check"></Image>
-              </div>
             </ul>
           </div>
           <div className="p-5">
-            <h2 className="text-gray-800 font-bold text-3xl pb-6">Nosotros</h2>
-            <p className="text-gray-500 text-md pb-2 font-semibold">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h2 className="text-white font-bold text-3xl pb-6">Nosotros</h2>
+            <p className="font-poppins text-white text-md pb-2 font-regular">
+              Somos parte de grupo de soporte tecnico que penso una forma de
+              solucionar las diferentes cositas de los clientes mediante esta
+              wikipedia que ayudara a todos los usuarios a poder aprender sobre
+              los sistemas de nucleo
             </p>
           </div>
 
           <div className="p-5 ">
             <ul>
-              <h2 className="text-gray-800 font-bold text-3xl pb-6">
-                Seguinos en...
-              </h2>
+              <h2 className="text-white font-bold text-3xl pb-6">Redes</h2>
               <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <a
                   href="https://www.linkedin.com/company/n%C3%BAcleo-it/mycompany/"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  className="text-white hover:text-primary dark:hover:text-primary "
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +47,9 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.youtube.com/user/nucleoit"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  className="text-white hover:text-primary dark:hover:text-primary"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +64,9 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.instagram.com/nucleoit/"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  className="text-white hover:text-primary dark:hover:text-primary"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +81,9 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.facebook.com/nucleoit"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  className="text-white hover:text-primary dark:hover:text-primary"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,9 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://api.whatsapp.com/send?phone=5491132777917"
-                  className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  className="text-white hover:text-primary dark:hover:text-primary"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

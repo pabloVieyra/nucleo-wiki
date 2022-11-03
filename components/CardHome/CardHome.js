@@ -4,10 +4,10 @@ import React from "react";
 const CardHome = ({ nombre, id }) => {
   return (
     <div>
-      <div className="flex-col border rounded-lg overflow-hidden bg-white my-12 mx-6 ">
+      <div className="flex-col border rounded-lg overflow-hidden bg-white2 my-12 mx-6 ">
         <div className="p-10 text-gray-600">
           {/* Texto */}
-          <div className="flex flex-row text-xl items-center justify-center">
+          <div className="flex flex-row text-xl  font-semibold text-blueTopo items-center justify-center">
             <h1 className="">{nombre}</h1>
           </div>
         </div>

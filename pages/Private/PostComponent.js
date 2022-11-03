@@ -14,7 +14,7 @@ const PostComponent = () => {
   };
 
   return (
-    <div>
+    <div className="w-full  bg-secundary ">
       <DragAndDrop></DragAndDrop>
       <button
         className="relative w-full min-h-screen bg-black text-green-500"
