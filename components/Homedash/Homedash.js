@@ -201,15 +201,6 @@ const Homedash = ({ system }) => {
             setChoice={setChoice}
           ></AbmCategoria>
         )}
-
-        {choice && (
-          <div className="flex justify-center">
-            <div className="flex  justify-center w-1/3 bg-red-400 m-4 p-6 text-lg text-white ">
-              {" "}
-              Felicidades
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
