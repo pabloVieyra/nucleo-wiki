@@ -22,7 +22,7 @@ async function createPost(req, res) {
     const newEntry = await prisma.post.create({
       data: {
         nombre: body.nombre,
-        categoria_id: body.categoria_id,
+        categoria_id: Number(body.categoria_id),
         sistema: body.sistema,
         visitas: body.visitas,
         valoraciones: body.valoraciones,
