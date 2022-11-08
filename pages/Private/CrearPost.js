@@ -1,52 +1,50 @@
 import React from "react";
-
+import AppLayoutPrivate from "../../components/AppLayout/AppLayoutPrivate";
 
 const CrearPost = () => {
-  
   return (
     <div>
-      <section >
-
+      <section>
         <div className="lg:px-40  min-h-screen w-full flex flex-col items-center justify-center bg-secundary">
-
           <div className="flex flex-col md:w-1/2 pt-2 px-8 mb-16 mr-32 text-4xl">
-            <h1 className="text-white">Hola</h1>
+            <h1 className="text-white">Bienvenido a Crear Post</h1>
           </div>
 
-          <form
-            action="#"
-            className="rounded-lg md:w-1/2 pt-2 px-8 bg-white"
-          >
+          <form action="#" className="rounded-lg md:w-1/2 pt-2 px-8 bg-white">
             <h2 className="text-2xl pb-3 font-semibold text-secundary">
               Post Nombre Post
             </h2>
             <div>
               <div className="flex flex-col mb-3">
-                <label className="text-secundary text-sm pb-3">Nombre del Post</label>
-                <input
-                  className="rounded-lg text-white text-sm px-3 py-2 bg-secundary"
-                />
+                <label className="text-secundary text-sm pb-3">
+                  Nombre del Post
+                </label>
+                <input className="rounded-lg text-white text-sm px-3 py-2 bg-secundary" />
               </div>
               <div className="flex flex-col mb-3">
-              <label  className="block mb-2 text-secundary ">Seleccionar Sistema</label>
+                <label className="block mb-2 text-secundary ">
+                  Seleccionar Sistema
+                </label>
                 <select className="rounded-lg text-white text-sm px-3 py-2 bg-secundary border">
                   <option selected>Sistema</option>
-                  <option >NG</option>
-                  <option >G1</option>
-                  <option >CHECK</option>
-                  <option >FCE</option>
-                  <option >COL</option>
+                  <option>NG</option>
+                  <option>G1</option>
+                  <option>CHECK</option>
+                  <option>FCE</option>
+                  <option>COL</option>
                 </select>
               </div>
               <div className="flex flex-col mb-3">
-              <label  className="block mb-2 text-secundary ">Seleccionar categoria</label>
+                <label className="block mb-2 text-secundary ">
+                  Seleccionar categoria
+                </label>
                 <select className="rounded-lg text-white text-sm px-3 py-2 bg-secundary border ">
                   <option selected>Categoria</option>
-                  <option >Categoria1</option>
-                  <option >Categoria2</option>
-                  <option >Categoria3</option>
-                  <option >Categoria4</option>
-                  <option >Categoria5</option>
+                  <option>Categoria1</option>
+                  <option>Categoria2</option>
+                  <option>Categoria3</option>
+                  <option>Categoria4</option>
+                  <option>Categoria5</option>
                 </select>
               </div>
             </div>
@@ -60,10 +58,10 @@ const CrearPost = () => {
       </section>
     </div>
   );
+};
 
-
-
-
+CrearPost.getLayout = function getLayout(page) {
+  return <AppLayoutPrivate>{page}</AppLayoutPrivate>;
 };
 
 export default CrearPost;
