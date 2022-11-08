@@ -19,6 +19,7 @@ module.exports = {
       cardDark: "#2F2F30",
       inputDark: "#404041",
       blueTopo: "#64748B",
+      dark: "#000000",
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
