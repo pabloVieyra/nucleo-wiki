@@ -160,7 +160,7 @@ const Homedash = ({ system }) => {
 
         <div className="flex-col-reverse mt-10  ml-40 mr-10    ">
           <div className="flex justify-end  ">
-            <Link href="/Private/Posts/NewPost">
+            <Link href="/Private/Posts/CrearPost">
               <button
                 htmlFor="choose-me"
                 className="select-none cursor-pointer rounded-lg border-2 border-primary

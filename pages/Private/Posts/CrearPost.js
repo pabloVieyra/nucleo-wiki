@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AppLayoutPrivate from "../../components/AppLayout/AppLayoutPrivate";
+import AppLayoutPrivate from "../../../components/AppLayout/AppLayoutPrivate";
 import axios from "axios";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
