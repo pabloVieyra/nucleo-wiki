@@ -3,6 +3,7 @@ import estilos from "./NavBar.module.css";
 import logo from "../../public/Images/logowiki.png";
 import perfil from "../../public/Images/perfil.png";
 import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import sistemas from "../../utilities/Systems.json";
@@ -111,8 +112,10 @@ const NavBar = () => {
       <div className={estilos.nav}>
         <div className={estilos.logo}>
           <Link href="/">
-            <Image src={logo} alt="logo"></Image>
+            <Image  width={50} height={50} src={logo} alt="logo"></Image>
+            
           </Link>
+          <h1>Nucleo Wiki</h1>
         </div>
 
         <ul className={estilos.NavBar}>

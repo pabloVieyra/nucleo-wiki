@@ -1,0 +1,39 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.sectionLanding{
+    height: 100vh;
+    width: 100%;
+    background-color: #121212;
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+
+.title h1{
+    font-family: inter;
+    font-style: Bold;
+    font-size: 72px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.sectionPost{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    padding: 50px;
+}
+
+.post{
+    width: 100%;
+    height: 200px;
+    background-color: #1F1F1F;
+    border-radius: 25px;
+}
