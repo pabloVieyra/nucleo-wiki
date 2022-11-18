@@ -1,4 +1,28 @@
 
+.buttonFixed{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 70px;
+    width: 105px;
+    background-color:   #1F1F1F;
+    border: 2px #567434 solid;
+    border-radius: 15px;
+    z-index: 10000;
+    color: white;
+    font-size: 130%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonFixed:hover{
+    background-color: #333333;
+}
+
+.buttonFixed:active{
+    scale: 0.96;
+
+}
 
 /*--------- Body - Iconos -----------*/
 
@@ -45,6 +69,8 @@
     background-color: #1F1F1F;
     border-radius: 35px;
     padding: 2%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .imgIcon{
@@ -69,4 +95,11 @@
     text-decoration: none;
     letter-spacing: 1px;
     color: white;
+}
+
+.card:hover{
+    scale: 1.05;
+    box-shadow: 0px 1px 16px 4px rgba(113,163,70,0.75);
+-webkit-box-shadow: 0px 1px 16px 4px rgba(113,163,70,0.75);
+-moz-box-shadow: 0px 1px 16px 4px rgba(113,163,70,0.75);
 }

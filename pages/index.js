@@ -17,7 +17,6 @@ export default function Home() {
         />
       </Head>
       <HomePage></HomePage>
-      <Landing></Landing>
     </>
   );
 }
