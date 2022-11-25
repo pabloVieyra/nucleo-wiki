@@ -158,6 +158,14 @@ export default function Post({ post, components }) {
                       })}
                     </tbody>
                   </table>
+
+                  <button
+                    htmlFor="choose-me"
+                    className="select-none cursor-pointer rounded-lg border-2 border-primary bg-inputDark
+             py-2  px-6 font-bold text-primary transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-checked:text-primary peer-checked:border-primary "
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>

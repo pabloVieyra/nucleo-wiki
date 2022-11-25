@@ -30,7 +30,7 @@ const CrearPost = () => {
           break;
         case "Col":
           values.Sistema = 5;
-          break;
+          brea;
       }
 
       PostPost(values);
@@ -38,22 +38,34 @@ const CrearPost = () => {
   });
 
   const PostPost = (values) => {
-    axios
-      .post("/api/Post", {
-        nombre: values.Nombre,
-        sistema: values.Sistema,
-        categoria_id: values.Categoria,
-        visitas: 0,
-        valoraciones: 0,
-      })
-      .then(function (response) {
-        console.log(response);
-        Swal.fire("Good job! Aprobado", response.statusText, "success");
-      })
-      .catch(function (error) {
-        console.log(error);
-        Swal.fire("Error!", error.response.data.error, "error");
-      });
+    categorias.map((categoria) => {
+      if (categoria.id == values.Categoria) {
+        if (categoria.sistema == values.Sistema) {
+          axios
+            .post("/api/Post", {
+              nombre: values.Nombre,
+              sistema: values.Sistema,
+              categoria_id: values.Categoria,
+              visitas: 0,
+              valoraciones: 0,
+            })
+            .then(function (response) {
+              console.log(response);
+              Swal.fire("Good job! Aprobado", response.statusText, "success");
+            })
+            .catch(function (error) {
+              console.log(error);
+              Swal.fire("Error!", error.response.data.error, "error");
+            });
+        } else {
+          Swal.fire(
+            "Error!",
+            "Te estas equivocando, selecciona una categoria que sea del sistema actual",
+            "error"
+          );
+        }
+      }
+    });
   };
 
   const GetCategoria = () => {
