@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar/NavBar";
+import Landing from "../components/Landing/Landing";
 import HomePage from "../components/Home/HomePage";
 import Dashboard from "../components/Dashboard/Dashboard";
 import AppLayout from "../components/AppLayout/AppLayout";

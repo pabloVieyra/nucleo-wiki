@@ -111,8 +111,9 @@ const NavBar = () => {
       <div className={estilos.nav}>
         <div className={estilos.logo}>
           <Link href="/">
-            <Image src={logo} alt="logo"></Image>
+            <Image width={50} height={50} src={logo} alt="logo"></Image>
           </Link>
+          <h1>Nucleo Wiki</h1>
         </div>
 
         <ul className={estilos.NavBar}>
