@@ -8,7 +8,7 @@ const Home = () => {
   const { sistema } = router.query;
 
   return (
-    <div className="w-full  bg-secundary ">
+    <div className="w-screen h-screen  bg-secundary ">
       <Homedash system={sistema}></Homedash>
     </div>
   );
