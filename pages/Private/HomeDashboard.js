@@ -3,7 +3,13 @@ import Homedash from "/components/Homedash/Homedash";
 import AppLayoutPrivate from "../../components/AppLayout/AppLayoutPrivate";
 
 const HomeDashboard = () => {
-  return <div className="bg-gray-900 "></div>;
+  return (
+    <div className="w-screen h-screen h-full  bg-secundary ">
+      <h1 className="text-4xl font-serif text-center text-white	">
+        Bienvenido al Dashboard de la WIKI
+      </h1>
+    </div>
+  );
 };
 
 HomeDashboard.getLayout = function getLayout(page) {

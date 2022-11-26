@@ -4,7 +4,7 @@ import Formulario from "../components/Formulario/Formulario";
 
 const Contacto = () => {
   return (
-    <div>
+    <div className=" w-full  bg-secundary ">
       <Formulario></Formulario>
     </div>
   );

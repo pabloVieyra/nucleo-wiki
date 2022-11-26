@@ -1,104 +1,105 @@
 
+.buttonFixed{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 70px;
+    width: 105px;
+    background-color:   #1F1F1F;
+    border: 2px #567434 solid;
+    border-radius: 15px;
+    z-index: 10000;
+    color: white;
+    font-size: 130%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonFixed:hover{
+    background-color: #333333;
+}
+
+.buttonFixed:active{
+    scale: 0.96;
+
+}
 
 /*--------- Body - Iconos -----------*/
 
+.title{
+    width: 100%;
+    height: 20vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
 
-.section{
-    height: 100vh;
+
+.title h1{
+    color: white;
+    font-size: 65px;
+
+}
+
+.sectionCard{
+    height: 90vh;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 2%;
-    padding-bottom: 70px;
-    padding-top: 140px;
+    padding: 5%;
     overflow: hidden;
     background-color:#121212 ;
-
+    gap: 3%;
 }
 
 /*--------- Iconos -----------*/
-.iconContainer{
-    height: 15vw;
-    width: 15vw;
-    perspective: 1000px;
-    transition: filter 0.3s ease ;
-}
 
-.iconContainer:hover{
-    
-    filter: drop-shadow(1px 1px 20px #577534);
-}
-
-.iconContainerInner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-    border-radius: 2000px;
-    
-    text-align: center;
-    transition: transform 0.8s 0.5s;
-    transform-style: preserve-3d;
-    
-}
-
-.iconContainer:hover .iconContainerInner{
-    transform: rotateY(180deg);
-}
 
 /*---------  Iconos 2 -----------*/
-.iconFront, .iconBack{
-    position: absolute;
-    border-radius: 2000px;
-    border: solid 2px #577534;
-    width: 100%;
-    height: 100%;
-    background-color: #121212;
-    backface-visibility: hidden;
-    -webkit-box-reflect: below 30px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.8)));
-   
-    
-}
 
-.iconFront{
-    height: 100%;
+.card{
+    height: 60vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 70% 70%;
-}
-
-.iconBack{
-    /*background-color: #1F1F1F;*/
-    color: white;
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-
-.iconText{
-    font-family: inter;
-    font-style: Bold;
-    font-size: 30px;
-    text-decoration: none;
-    letter-spacing: 1px;
-    color: #577534;
+    background-color: #1F1F1F;
+    border-radius: 35px;
+    padding: 2%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .imgIcon{
-    height: 170px;
-    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.landing{
-    height: 100vh;
-    width: 100%
-    ;
-    background-color: #577534;
+.titleCard{
+    font-family: inter;
+    font-style: Bold;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.text{
+    font-family: inter;
+    font-style: Bold;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.card:hover{
+    scale: 1.05;
+    box-shadow: 0px 1px 16px 4px rgba(113,163,70,0.75);
+-webkit-box-shadow: 0px 1px 16px 4px rgba(113,163,70,0.75);
+-moz-box-shadow: 0px 1px 16px 4px rgba(113,163,70,0.75);
 }

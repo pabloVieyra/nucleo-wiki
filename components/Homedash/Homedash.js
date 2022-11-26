@@ -142,7 +142,7 @@ const Homedash = ({ system }) => {
           {/* Aca termina la busqueda */}
           <label
             htmlFor="countries"
-            className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-400"
+            className="block mb-1 text-sm font-medium text-white dark:text-gray-400"
           >
             Select an option
           </label>
@@ -160,11 +160,11 @@ const Homedash = ({ system }) => {
 
         <div className="flex-col-reverse mt-10  ml-40 mr-10    ">
           <div className="flex justify-end  ">
-            <Link href="/Private/Posts/NewPost">
+            <Link href="/Private/Posts/CrearPost">
               <button
                 htmlFor="choose-me"
-                className="select-none cursor-pointer rounded-lg border-2 border-gray-200
-            py-2 px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out peer-checked:bg-gray-200 peer-checked:text-gray-900 peer-checked:border-gray-200 "
+                className="select-none cursor-pointer rounded-lg border-2 border-primary
+            py-2 px-6 font-bold text-primary transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-checked:text-primary peer-checked:border-primary "
               >
                 Crear Post
               </button>
@@ -174,8 +174,8 @@ const Homedash = ({ system }) => {
           <div className="flex justify-end mt-4 ">
             <button
               htmlFor="choose-me"
-              className="select-none cursor-pointer rounded-lg border-2 border-gray-200
-             py-2  px-6 font-bold text-gray-200 transition-colors duration-200 ease-in-out peer-checked:bg-gray-200 peer-checked:text-gray-900 peer-checked:border-gray-200 "
+              className="select-none cursor-pointer rounded-lg border-2 border-primary
+             py-2  px-6 font-bold text-primary transition-colors duration-200 ease-in-out peer-checked:bg-primary peer-checked:text-primary peer-checked:border-primary "
               onClick={clicked}
             >
               Crear Categoria
@@ -200,15 +200,6 @@ const Homedash = ({ system }) => {
             setModalOn={setModalOn}
             setChoice={setChoice}
           ></AbmCategoria>
-        )}
-
-        {choice && (
-          <div className="flex justify-center">
-            <div className="flex  justify-center w-1/3 bg-red-400 m-4 p-6 text-lg text-white ">
-              {" "}
-              Felicidades
-            </div>
-          </div>
         )}
       </div>
     </>

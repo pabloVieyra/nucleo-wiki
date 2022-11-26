@@ -10,13 +10,14 @@
     justify-content: space-between;
     z-index: 1000;
     list-style: none;
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
     padding-right: 50px;
 }
 
 .nav.a{
     text-decoration: none;
 }
+
 
 .NavBar{
     font-family: inter;
@@ -43,13 +44,13 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     width: 100%;
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
 }
 
 .menuVer{
     position: absolute;
     top: 98%;
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
 }
 
 
@@ -57,7 +58,7 @@
     left: 97%;
     top: 0px;
     
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
     overflow: scroll;
     max-height: 80vh;
 }
@@ -120,12 +121,22 @@
 
 
 /*------------ Logos -------------*/
+
 .logo{
-    width: 342px;
-    height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logo h1{
+    font-family: inter;
+    font-style: Bold;
+    font-size: 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
 }
 
 .perfil{
@@ -157,41 +168,8 @@
 .blurContain{
     position: fixed;
     height: 100%;
-
     width: 100%;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     background-color: rgba(55, 55, 55, 0.25);
-   
-    
 }
-
-
-
-
-
-
-/*
-.blur {
-    background: inherit;
-    z-index: 100;
-}
- 
-.blur:before {
-    background: inherit;
-}
-
-.blur:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.blur:before {
-    background-color:  rgba(31, 31, 31, 0.601);
-    filter: blur(1px);
-    z-index: -1;
-}*/
